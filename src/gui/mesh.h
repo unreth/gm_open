@@ -68,6 +68,7 @@ public:
     };
 
 private:
+    glcolor glc;
     std::vector<vertex> vertices;
     std::vector<triangle> triangles;
 };

@@ -153,7 +153,9 @@ void mesh::renderGL() const {
         for (unsigned int j = 0; j < 3; j++)
             v[j] = vertices[t.getVertex(j)];
         for (unsigned int j = 0; j < 3; j++){
-            glColor3f(v[j].getColor0(),v[j].getColor1(),v[j].getColor2());
+            v[j].calcangles();
+            v[j].setcolor();
+            glColor3f(v[j].getR(),v[j].getG(),v[j].getB());
             glNormal3f (v[j].getNormal()[0], v[j].getNormal()[1], v[j].getNormal()[2]);
             glVertex3f (v[j].getPos()[0],    v[j].getPos()[1],    v[j].getPos()[2]);
         }

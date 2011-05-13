@@ -12,29 +12,25 @@
 #include <QGLViewer/qglviewer.h>
 
 #include "vec3D.h"
+#include "glcolor.h"
 
 #define PI 3.141592
 
 class vertex {
 public:
-    inline vertex () :                                          pos (vec3Df (0.0,0.0,0.0)), normal (vec3Df (0.0, 0.0, 1.0)), marked (false),    id (-1) { initcolor(); calcangles(); }
-    inline vertex (const vec3Df & pos) :                        pos (pos),                  normal (vec3Df (0.0, 0.0, 1.0)), marked (false),    id (-1) { initcolor(); calcangles(); }
-    inline vertex (const vec3Df & pos, const vec3Df & normal) : pos (pos),                  normal (normal),                 marked (false),    id (-1) { initcolor(); calcangles(); }
-    inline vertex (const vertex & v) :                          pos (v.pos),                normal (v.normal),               marked (v.marked), id (-1) { initcolor(); calcangles(); }
+    inline vertex () :                                          pos (vec3Df (0.0,0.0,0.0)), normal (vec3Df (0.0, 0.0, 1.0)), marked (false),    id (-1) {}
+    inline vertex (const vec3Df & pos) :                        pos (pos),                  normal (vec3Df (0.0, 0.0, 1.0)), marked (false),    id (-1) {}
+    inline vertex (const vec3Df & pos, const vec3Df & normal) : pos (pos),                  normal (normal),                 marked (false),    id (-1) {}
+    inline vertex (const vertex & v) :                          pos (v.pos),                normal (v.normal),               marked (v.marked), id (-1) {}
     inline virtual ~vertex () {}
 
-    inline void initcolor() {
-        //color
-        color[0] = 1.f;
-        color[1] = 1.f;
-        color[2] = 1.f;
-    }
     inline void calcangles () {
         //theta
         if(pos[2]>0)                    theta = atan(sqrt(pos[0]*pos[0] + pos[1]*pos[1])/pos[2]);
         else if(pos[2]<0)               theta = atan(sqrt(pos[0]*pos[0] + pos[1]*pos[1])/pos[2]) + PI;
         else                            theta = PI/2;
         theta *= 180/PI;
+
         //phi
         if(pos[0]>0){
             if(pos[1]<0)                phi = atan(pos[1]/pos[0]) + 2*PI;
@@ -43,8 +39,14 @@ public:
         else if(pos[0]<0)               phi = atan(pos[1]/pos[0]) + PI;
         else{
             if(pos[1]<0)                phi = -PI/2;
-            else                        phi = -PI/2;
+            else                        phi = PI/2;
         }
+        phi *= 180/PI;
+
+    }
+    inline void setcolor() {
+        glc = glcolor::getInstance();
+        this->color = glc->getColor(theta,phi);
     }
 
     inline vertex & operator= (const vertex & vertex) {
@@ -54,9 +56,10 @@ public:
         id = -1;
         return (*this);
     }
-    inline const GLfloat & getColor0() const { return color[0]; }
-    inline const GLfloat & getColor1() const { return color[1]; }
-    inline const GLfloat & getColor2() const { return color[2]; }
+    inline const GLfloat & getR() const { return this->color[0]; }
+    inline const GLfloat & getG() const { return this->color[1]; }
+    inline const GLfloat & getB() const { return this->color[2]; }
+
     inline const vec3Df & getPos () const { return pos; }
     inline const vec3Df & getNormal () const { return normal; }  
     inline bool isMarked () const { return marked; }
@@ -73,8 +76,10 @@ public:
     static void scaleToUnitBox (std::vector<vertex> & vertices, vec3Df & center, float & scaleToUnitBox);
     static void normalizeNormals (std::vector<vertex> & vertices);
 
+    vec3Df color;
+
 private:
-    GLfloat color[3];
+    glcolor * glc;
     vec3Df pos;
     vec3Df normal;
     bool marked;
