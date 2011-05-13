@@ -29,7 +29,7 @@ class mesh {
 public:
     static mesh * getInstance ();
     inline mesh () {
-        loadOFF("../../models/brain.off");
+        loadOFF("models/brain.off");
     }
     inline mesh (const std::vector<vertex> & v) 
         : vertices (v) {}
