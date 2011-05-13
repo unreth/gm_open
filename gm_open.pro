@@ -2,21 +2,21 @@ TEMPLATE = app
 TARGET   = gm_open
 CONFIG  += qt opengl warn_on release thread
 
-HEADERS = Window.h \
-          GLViewer.h \
-          Vec3D.h \
-          Vertex.h \
-          Triangle.h \
-          Mesh.h \
-    glcolor.h
+HEADERS = window.h \
+          glviewer.h \
+          vec3D.h \
+          vertex.h \
+          triangle.h \
+          mesh.h \
+          glcolor.h
 
-SOURCES = Window.cpp \
-          GLViewer.cpp \
-          Vertex.cpp \
-          Triangle.cpp \
-          Mesh.cpp \
-          Main.cpp \
-    glcolor.cpp
+SOURCES = window.cpp \
+          glviewer.cpp \
+          vertex.cpp \
+          triangle.cpp \
+          mesh.cpp \
+          main.cpp \
+          glcolor.cpp
 
 
 DESTDIR = .
