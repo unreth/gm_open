@@ -1,0 +1,9 @@
+# Hashes of file build rules.
+b6ab0ed7ee91b6c8c7c68fe40daf67e2 src/gui/moc_edge.cxx
+376e7c6e6640e0592772ca1efe57439a src/gui/moc_glcolor.cxx
+018698f70b7e419a1fa264893dcfe8d0 src/gui/moc_glviewer.cxx
+ebeb82658d09b99f3403d740e2327cda src/gui/moc_mesh.cxx
+8603e484b54411f1744078c265995261 src/gui/moc_triangle.cxx
+a26ee923c6e4fecb37d3769ae6b83dae src/gui/moc_vec3D.cxx
+d76756cd84436b74d4367bb95756ec0d src/gui/moc_vertex.cxx
+37e35c3c6c8fc87cb932093f05cc02d3 src/gui/moc_window.cxx

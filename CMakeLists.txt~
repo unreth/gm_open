@@ -3,7 +3,7 @@ PROJECT(gmopen)
 
 SET(BUILD_SHARED_LIBS true)
 
-LIST(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/find)
+LIST(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/ind)
 
 include_directories(/usr/local/include)
 LINK_DIRECTORIES(/usr/local/lib)

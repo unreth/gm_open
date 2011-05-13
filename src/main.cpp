@@ -1,7 +1,7 @@
 #include <QApplication>
 #include <QPlastiqueStyle>
 
-#include "window.h"
+#include "gui/window.h"
 
 using namespace std;
 
@@ -9,10 +9,10 @@ int main (int argc, char **argv)
 {
   QApplication raymini (argc, argv);
   QApplication::setStyle (new QPlastiqueStyle);
-  window * window = new window ();
-  window->setWindowTitle ("RayMini: A minimal image synthesizer based on raytracing.");
-  window->showMaximized ();
-  window->show();
+  window * w = new window ();
+  w->setWindowTitle ("RayMini: A minimal image synthesizer based on raytracing.");
+  w->showMaximized ();
+  w->show();
   raymini.connect (&raymini, SIGNAL (lastWindowClosed()), &raymini, SLOT (quit()));
   
   return raymini.exec ();
