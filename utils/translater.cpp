@@ -3,13 +3,13 @@
 #include <sstream>
 #include <vector>
 
-#include "Vec3D.h"
+#include "../src/gui/vec3D.h"
 
 using namespace std;
 
 int main(int argc, char** argv){
-    ifstream input ("models/brain.off");
-    ofstream output ("newbrain.off");
+    ifstream input ("../models/brain.off");
+    ofstream output ("../models/newbrain.off");
     string magic_word;
     input >> magic_word;
     output << magic_word << endl;
@@ -17,9 +17,9 @@ int main(int argc, char** argv){
     input >> numOfVertices >> numOfTriangles >> numOfWhat;
     output << numOfVertices << " " << numOfTriangles << " " << numOfWhat << endl;
     for (unsigned int i = 0; i < numOfVertices; i++) {
-        Vec3Df pos;
+        vec3Df pos;
         input >> pos;
-        pos += -Vec3Df(0,1,0);
+        pos += vec3Df(0,1,0);
         output << pos << endl;
     }
     for (unsigned int i = 0; i < numOfTriangles; i++) {

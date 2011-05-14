@@ -34,6 +34,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef VEC3D_H
 #define VEC3D_H
 
+#include <math.h>
+
 template<typename T> class vec3D;
 
 template <class T> bool operator!= (const vec3D<T> & p1, const vec3D<T> & p2) {
