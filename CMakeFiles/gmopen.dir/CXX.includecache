@@ -82,8 +82,6 @@ edge.h
 glviewer.h
 /home/unre/Desktop/gm_open/src/gui/glviewer.h
 
-/home/unre/Desktop/gm_open/src/gui/moc_mesh.cxx
-
 /home/unre/Desktop/gm_open/src/gui/moc_window.cxx
 window.h
 /home/unre/Desktop/gm_open/src/gui/window.h
