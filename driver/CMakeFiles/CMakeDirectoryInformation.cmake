@@ -13,10 +13,6 @@ SET(CMAKE_C_INCLUDE_PATH
   "/usr/local/include"
   "/usr/include/libusb-1.0"
   "/driver"
-  "/usr/include/QtOpenGL"
-  "/usr/include/QtGui"
-  "/usr/include/QtCore"
-  "."
   )
 SET(CMAKE_CXX_INCLUDE_PATH ${CMAKE_C_INCLUDE_PATH})
 SET(CMAKE_Fortran_INCLUDE_PATH ${CMAKE_C_INCLUDE_PATH})

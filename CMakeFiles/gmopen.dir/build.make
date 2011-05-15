@@ -412,42 +412,42 @@ CMakeFiles/gmopen.dir/src/gui/moc_window.cxx.o.provides.build: CMakeFiles/gmopen
 src/gui/moc_glcolor.cxx: src/gui/glcolor.h
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/unre/Desktop/gm_open/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating src/gui/moc_glcolor.cxx"
-	/usr/bin/moc -I/usr/local/include -I/usr/include -o /home/unre/Desktop/gm_open/src/gui/moc_glcolor.cxx /home/unre/Desktop/gm_open/src/gui/glcolor.h
+	/usr/bin/moc -I/usr/local/include -I/usr/include/libusb-1.0 -I/driver -I/usr/include -o /home/unre/Desktop/gm_open/src/gui/moc_glcolor.cxx /home/unre/Desktop/gm_open/src/gui/glcolor.h
 
 src/gui/moc_vec3D.cxx: src/gui/vec3D.h
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/unre/Desktop/gm_open/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating src/gui/moc_vec3D.cxx"
-	/usr/bin/moc -I/usr/local/include -I/usr/include -o /home/unre/Desktop/gm_open/src/gui/moc_vec3D.cxx /home/unre/Desktop/gm_open/src/gui/vec3D.h
+	/usr/bin/moc -I/usr/local/include -I/usr/include/libusb-1.0 -I/driver -I/usr/include -o /home/unre/Desktop/gm_open/src/gui/moc_vec3D.cxx /home/unre/Desktop/gm_open/src/gui/vec3D.h
 
 src/gui/moc_triangle.cxx: src/gui/triangle.h
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/unre/Desktop/gm_open/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating src/gui/moc_triangle.cxx"
-	/usr/bin/moc -I/usr/local/include -I/usr/include -o /home/unre/Desktop/gm_open/src/gui/moc_triangle.cxx /home/unre/Desktop/gm_open/src/gui/triangle.h
+	/usr/bin/moc -I/usr/local/include -I/usr/include/libusb-1.0 -I/driver -I/usr/include -o /home/unre/Desktop/gm_open/src/gui/moc_triangle.cxx /home/unre/Desktop/gm_open/src/gui/triangle.h
 
 src/gui/moc_vertex.cxx: src/gui/vertex.h
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/unre/Desktop/gm_open/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating src/gui/moc_vertex.cxx"
-	/usr/bin/moc -I/usr/local/include -I/usr/include -o /home/unre/Desktop/gm_open/src/gui/moc_vertex.cxx /home/unre/Desktop/gm_open/src/gui/vertex.h
+	/usr/bin/moc -I/usr/local/include -I/usr/include/libusb-1.0 -I/driver -I/usr/include -o /home/unre/Desktop/gm_open/src/gui/moc_vertex.cxx /home/unre/Desktop/gm_open/src/gui/vertex.h
 
 src/gui/moc_edge.cxx: src/gui/edge.h
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/unre/Desktop/gm_open/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating src/gui/moc_edge.cxx"
-	/usr/bin/moc -I/usr/local/include -I/usr/include -o /home/unre/Desktop/gm_open/src/gui/moc_edge.cxx /home/unre/Desktop/gm_open/src/gui/edge.h
+	/usr/bin/moc -I/usr/local/include -I/usr/include/libusb-1.0 -I/driver -I/usr/include -o /home/unre/Desktop/gm_open/src/gui/moc_edge.cxx /home/unre/Desktop/gm_open/src/gui/edge.h
 
 src/gui/moc_mesh.cxx: src/gui/mesh.h
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/unre/Desktop/gm_open/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating src/gui/moc_mesh.cxx"
-	/usr/bin/moc -I/usr/local/include -I/usr/include -o /home/unre/Desktop/gm_open/src/gui/moc_mesh.cxx /home/unre/Desktop/gm_open/src/gui/mesh.h
+	/usr/bin/moc -I/usr/local/include -I/usr/include/libusb-1.0 -I/driver -I/usr/include -o /home/unre/Desktop/gm_open/src/gui/moc_mesh.cxx /home/unre/Desktop/gm_open/src/gui/mesh.h
 
 src/gui/moc_glviewer.cxx: src/gui/glviewer.h
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/unre/Desktop/gm_open/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating src/gui/moc_glviewer.cxx"
-	/usr/bin/moc -I/usr/local/include -I/usr/include -o /home/unre/Desktop/gm_open/src/gui/moc_glviewer.cxx /home/unre/Desktop/gm_open/src/gui/glviewer.h
+	/usr/bin/moc -I/usr/local/include -I/usr/include/libusb-1.0 -I/driver -I/usr/include -o /home/unre/Desktop/gm_open/src/gui/moc_glviewer.cxx /home/unre/Desktop/gm_open/src/gui/glviewer.h
 
 src/gui/moc_window.cxx: src/gui/window.h
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/unre/Desktop/gm_open/CMakeFiles $(CMAKE_PROGRESS_23)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating src/gui/moc_window.cxx"
-	/usr/bin/moc -I/usr/local/include -I/usr/include -o /home/unre/Desktop/gm_open/src/gui/moc_window.cxx /home/unre/Desktop/gm_open/src/gui/window.h
+	/usr/bin/moc -I/usr/local/include -I/usr/include/libusb-1.0 -I/driver -I/usr/include -o /home/unre/Desktop/gm_open/src/gui/moc_window.cxx /home/unre/Desktop/gm_open/src/gui/window.h
 
 # Object files for target gmopen
 gmopen_OBJECTS = \
@@ -485,6 +485,8 @@ gmopen: CMakeFiles/gmopen.dir/src/gui/moc_edge.cxx.o
 gmopen: CMakeFiles/gmopen.dir/src/gui/moc_mesh.cxx.o
 gmopen: CMakeFiles/gmopen.dir/src/gui/moc_glviewer.cxx.o
 gmopen: CMakeFiles/gmopen.dir/src/gui/moc_window.cxx.o
+gmopen: /usr/lib/libmcrypt.so
+gmopen: /usr/lib/libusb-1.0.so
 gmopen: /usr/lib/libQtOpenGL.so
 gmopen: /usr/lib/libQtGui.so
 gmopen: /usr/lib/libQtCore.so

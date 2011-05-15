@@ -42,7 +42,6 @@ public:
             else                        phi = PI/2;
         }
         phi *= 180/PI;
-
     }
     inline void setcolor() {
         glc = glcolor::getInstance();

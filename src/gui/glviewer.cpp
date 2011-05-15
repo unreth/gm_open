@@ -17,13 +17,10 @@ void glviewer::setRenderingMode (bool m) {
     updateGL ();
 }
 
-void glviewer::keyPressEvent (QKeyEvent * /*event*/) {
-    
+void glviewer::keyPressEvent (QKeyEvent * /*event*/)   {
+    camera()->frame()->rotate(1,1,1,1);
 }
-
-void glviewer::keyReleaseEvent (QKeyEvent * /*event*/) {
-
-}
+void glviewer::keyReleaseEvent (QKeyEvent * /*event*/) {}
 
 void glviewer::init() {
     glClearColor (0.f, 0.f, 0.f, 0.0);

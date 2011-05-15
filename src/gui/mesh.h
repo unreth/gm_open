@@ -24,6 +24,7 @@
 #include "vertex.h"
 #include "triangle.h"
 #include "edge.h"
+#include "glcolor.h"
 
 class mesh {
 public:

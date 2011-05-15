@@ -9,55 +9,107 @@
 
 using namespace std;
 
+class eegcoord {
+    //emotiv epoc: AF3, F7, F3, FC5, T7, P7, O1, O2, P8, T8, FC6, F4, F8, AF4.
+
+    static const int FP1i= 0;
+    static const int FP2i= 0;
+    static const int F7i = 1;
+    static const int F3i = 1;
+    static const int Fzi = 1;
+    static const int F4i = 1;
+    static const int F8i = 1;
+    static const int T3i = 2;
+    static const int C3i = 2;
+    static const int Czi = 2;
+    static const int C4i = 2;
+    static const int T4i = 2;
+    static const int T5i = 3;
+    static const int P3i = 3;
+    static const int Pzi = 3;
+    static const int P4i = 3;
+    static const int T6i = 3;
+    static const int O1i = 4;
+    static const int O2i = 4;
+
+    static const int FP1j= 0;
+    static const int FP2j= 4;
+    static const int F7j = 0;
+    static const int F3j = 1;
+    static const int Fzj = 2;
+    static const int F4j = 3;
+    static const int F8j = 4;
+    static const int T3j = 0;
+    static const int C3j = 1;
+    static const int Czj = 2;
+    static const int C4j = 3;
+    static const int T4j = 4;
+    static const int T5j = 0;
+    static const int P3j = 1;
+    static const int Pzj = 2;
+    static const int P4j = 3;
+    static const int T6j = 4;
+    static const int O1j = 0;
+    static const int O2j = 4;
+
+};
+
 class glcolor
 {
 public:
-    vec3Df color[5][6];
     static const int ntheta = 5;
+    static const float steptheta = 33.33;
+    static const float inittheta = 16.66;
     static const int nphi = 6;
+    static const float initphi = 0;
+    static const float stepphi = 34;
+
+    float epsilon;
+    bool points;
+    bool lines;
+    vec3Df bg;
+    vec3Df eeg[5][6];
 
     static glcolor * getInstance ();
 
     inline glcolor() {
-        //theta
-        for(int i=0; i<ntheta; i++){
-            //phi
-            for(int j=0; j<nphi; j++){
-//                color[i][j] = vec3Df(1,1,1);                                                          //blanc
-//                color[i][j] = vec3Df(i/(float)(ntheta-1),i/(float)(ntheta-1),i/(float)(ntheta-1));    //theta
-//                color[i][j] = vec3Df(j/(float)(nphi-1),j/(float)(nphi-1),j/(float)(nphi-1));          //phi
-                color[i][j] = vec3Df(i/(float)(ntheta-1),j/(float)(nphi-1),0);                        //theta,phi
+        epsilon = 0.1;
+        points = false;
+        lines = false;
+        bg = vec3Df(1,1,1);
+
+        for(int i=0; i<ntheta; i++){    //theta
+            for(int j=0; j<nphi; j++){  //phi
+//                eeg[i][j] = vec3Df(1,1,1);                                                          //blanc
+                eeg[i][j] = vec3Df(i/(float)(ntheta-1),i/(float)(ntheta-1),i/(float)(ntheta-1));    //theta
+                eeg[i][j] = vec3Df(j/(float)(nphi-1),j/(float)(nphi-1),j/(float)(nphi-1));          //phi
+//                eeg[i][j] = vec3Df(i/(float)(ntheta-1),j/(float)(nphi-1),0);                        //theta,phi
             }
         }
     }
-    inline void set(int i, int j, GLfloat r,GLfloat g,GLfloat b) {
-        color[i][j][0] = r;
-        color[i][j][1] = g;
-        color[i][j][2] = b;
+    inline void setEpsilon(float e) { this->epsilon = e; }
+    inline void setPoints(bool p)   { this->points = p;  }
+    inline void setLines(bool l)    { this->lines = l;   }
+    inline void setBg(vec3Df b)     { this->bg = b;      }
+    inline void setEeg(int i, int j, GLfloat r,GLfloat g,GLfloat b) {
+        eeg[i][j][0] = r;
+        eeg[i][j][1] = g;
+        eeg[i][j][2] = b;
     }
     inline vec3Df getColor(float & theta, float & phi){
-        float epsilon = 0.1;
-
-        float steptheta = 33.33;
-        float inittheta = steptheta/2;
         float i = (theta-inittheta)/steptheta;
-//        if(i<0) i=0;
-//        if(i>ntheta-1) i=ntheta-1;
-
-        float initphi = 0;
-        float stepphi = 34;
         float j = (phi-initphi)/stepphi;
-//        if(j<0) j=0;
-//        if(j>nphi-1) j=nphi-1;
 
-        if(abs(i-(int)i)<epsilon || abs(j-(int)j)<epsilon){
-        if(i>=0 && i<ntheta-1 && j>=0 && j<nphi-1){
-            vec3Df ret = color[(int)i][(int)j];
-            ret += (i-(int)i)*(color[(int)i+1][(int)j]-color[(int)i][(int)j]);
-            ret += (j-(int)j)*(color[(int)i][(int)j+1]-color[(int)i][(int)j]);
-            return ret;
-        } else return vec3Df(1,1,1);
-        } else return vec3Df(1,1,1);
+        if(!points || (abs(i-(int)i)<epsilon && abs(j-(int)j)<epsilon)){    //points
+        if(!lines  || (abs(i-(int)i)<epsilon || abs(j-(int)j)<epsilon)){    //lines
+            if(i>=0 && i<ntheta-1 && j>=0 && j<nphi-1){                     //working area
+                vec3Df ret = eeg[(int)i][(int)j];
+                ret += (i-(int)i)*(eeg[(int)i+1][(int)j]-eeg[(int)i][(int)j]);
+                ret += (j-(int)j)*(eeg[(int)i][(int)j+1]-eeg[(int)i][(int)j]);
+                return ret;
+            } else return bg;
+        } else return bg;
+        } else return bg;
     }
 };
 

@@ -1,0 +1,2 @@
+/usr/bin/ar cr libepoc.a  CMakeFiles/epoc.dir/epoc.c.o CMakeFiles/epoc.dir/epoc_libusb.c.o
+/usr/bin/ranlib libepoc.a

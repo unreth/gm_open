@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/unre/Desktop/gm_open/driver/epoc.c
+mcrypt.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+libepoc.h
+/home/unre/Desktop/gm_open/driver/libepoc.h
+
+/home/unre/Desktop/gm_open/driver/epoc_libusb.c
+libepoc.h
+/home/unre/Desktop/gm_open/driver/libepoc.h
+stdlib.h
+-
+
+/home/unre/Desktop/gm_open/driver/libepoc.h
+stdio.h
+-
+stdint.h
+-
+libusb-1.0/libusb.h
+/home/unre/Desktop/gm_open/driver/libusb-1.0/libusb.h
+windows.h
+-
+
