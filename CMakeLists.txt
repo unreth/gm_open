@@ -60,10 +60,13 @@ SET(QT_USE_QTOPENGL TRUE)
 FIND_PACKAGE(QGLViewer)
 INCLUDE_DIRECTORIES(${QGLVIEWER_INCLUDE_DIR})
 
-SET(gmopen_SOURCES      src/gui/glcolor.cpp
+SET(gmopen_SOURCES      driver/epoc.c
+                        driver/epoc_libusb.c
+                        src/gui/glcolor.cpp
                         src/gui/triangle.cpp
                         src/gui/vertex.cpp
                         src/gui/mesh.cpp
+                        src/gui/epoc.cpp
                         src/gui/glviewer.cpp
                         src/gui/window.cpp
                         src/main.cpp)
@@ -74,6 +77,7 @@ SET(gmopen_HEADERS      src/gui/glcolor.h
                         src/gui/vertex.h
                         src/gui/edge.h
                         src/gui/mesh.h
+                        src/gui/epoc.h
                         src/gui/glviewer.h
                         src/gui/window.h)
 
@@ -92,6 +96,3 @@ TARGET_LINK_LIBRARIES(gmopen
                       ${QT_LIBRARIES}
                       ${QT_QTOPENGL_LIBRARIES}
                       ${QGLVIEWER_LIBRARIES})
-
-
-

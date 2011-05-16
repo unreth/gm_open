@@ -1,8 +1,11 @@
 FILE(REMOVE_RECURSE
+  "CMakeFiles/gmopen.dir/driver/epoc.c.o"
+  "CMakeFiles/gmopen.dir/driver/epoc_libusb.c.o"
   "CMakeFiles/gmopen.dir/src/gui/glcolor.cpp.o"
   "CMakeFiles/gmopen.dir/src/gui/triangle.cpp.o"
   "CMakeFiles/gmopen.dir/src/gui/vertex.cpp.o"
   "CMakeFiles/gmopen.dir/src/gui/mesh.cpp.o"
+  "CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o"
   "CMakeFiles/gmopen.dir/src/gui/glviewer.cpp.o"
   "CMakeFiles/gmopen.dir/src/gui/window.cpp.o"
   "CMakeFiles/gmopen.dir/src/main.cpp.o"
@@ -12,6 +15,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/gmopen.dir/src/gui/moc_vertex.cxx.o"
   "CMakeFiles/gmopen.dir/src/gui/moc_edge.cxx.o"
   "CMakeFiles/gmopen.dir/src/gui/moc_mesh.cxx.o"
+  "CMakeFiles/gmopen.dir/src/gui/moc_epoc.cxx.o"
   "CMakeFiles/gmopen.dir/src/gui/moc_glviewer.cxx.o"
   "CMakeFiles/gmopen.dir/src/gui/moc_window.cxx.o"
   "src/gui/moc_glcolor.cxx"
@@ -20,6 +24,7 @@ FILE(REMOVE_RECURSE
   "src/gui/moc_vertex.cxx"
   "src/gui/moc_edge.cxx"
   "src/gui/moc_mesh.cxx"
+  "src/gui/moc_epoc.cxx"
   "src/gui/moc_glviewer.cxx"
   "src/gui/moc_window.cxx"
   "gmopen.pdb"
@@ -27,6 +32,6 @@ FILE(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-FOREACH(lang CXX)
+FOREACH(lang C CXX)
   INCLUDE(CMakeFiles/gmopen.dir/cmake_clean_${lang}.cmake OPTIONAL)
 ENDFOREACH(lang)

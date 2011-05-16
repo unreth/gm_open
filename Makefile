@@ -165,6 +165,78 @@ epoc/fast:
 	$(MAKE) -f driver/CMakeFiles/epoc.dir/build.make driver/CMakeFiles/epoc.dir/build
 .PHONY : epoc/fast
 
+driver/epoc.o: driver/epoc.c.o
+.PHONY : driver/epoc.o
+
+# target to build an object file
+driver/epoc.c.o:
+	$(MAKE) -f CMakeFiles/gmopen.dir/build.make CMakeFiles/gmopen.dir/driver/epoc.c.o
+.PHONY : driver/epoc.c.o
+
+driver/epoc.i: driver/epoc.c.i
+.PHONY : driver/epoc.i
+
+# target to preprocess a source file
+driver/epoc.c.i:
+	$(MAKE) -f CMakeFiles/gmopen.dir/build.make CMakeFiles/gmopen.dir/driver/epoc.c.i
+.PHONY : driver/epoc.c.i
+
+driver/epoc.s: driver/epoc.c.s
+.PHONY : driver/epoc.s
+
+# target to generate assembly for a file
+driver/epoc.c.s:
+	$(MAKE) -f CMakeFiles/gmopen.dir/build.make CMakeFiles/gmopen.dir/driver/epoc.c.s
+.PHONY : driver/epoc.c.s
+
+driver/epoc_libusb.o: driver/epoc_libusb.c.o
+.PHONY : driver/epoc_libusb.o
+
+# target to build an object file
+driver/epoc_libusb.c.o:
+	$(MAKE) -f CMakeFiles/gmopen.dir/build.make CMakeFiles/gmopen.dir/driver/epoc_libusb.c.o
+.PHONY : driver/epoc_libusb.c.o
+
+driver/epoc_libusb.i: driver/epoc_libusb.c.i
+.PHONY : driver/epoc_libusb.i
+
+# target to preprocess a source file
+driver/epoc_libusb.c.i:
+	$(MAKE) -f CMakeFiles/gmopen.dir/build.make CMakeFiles/gmopen.dir/driver/epoc_libusb.c.i
+.PHONY : driver/epoc_libusb.c.i
+
+driver/epoc_libusb.s: driver/epoc_libusb.c.s
+.PHONY : driver/epoc_libusb.s
+
+# target to generate assembly for a file
+driver/epoc_libusb.c.s:
+	$(MAKE) -f CMakeFiles/gmopen.dir/build.make CMakeFiles/gmopen.dir/driver/epoc_libusb.c.s
+.PHONY : driver/epoc_libusb.c.s
+
+src/gui/epoc.o: src/gui/epoc.cpp.o
+.PHONY : src/gui/epoc.o
+
+# target to build an object file
+src/gui/epoc.cpp.o:
+	$(MAKE) -f CMakeFiles/gmopen.dir/build.make CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o
+.PHONY : src/gui/epoc.cpp.o
+
+src/gui/epoc.i: src/gui/epoc.cpp.i
+.PHONY : src/gui/epoc.i
+
+# target to preprocess a source file
+src/gui/epoc.cpp.i:
+	$(MAKE) -f CMakeFiles/gmopen.dir/build.make CMakeFiles/gmopen.dir/src/gui/epoc.cpp.i
+.PHONY : src/gui/epoc.cpp.i
+
+src/gui/epoc.s: src/gui/epoc.cpp.s
+.PHONY : src/gui/epoc.s
+
+# target to generate assembly for a file
+src/gui/epoc.cpp.s:
+	$(MAKE) -f CMakeFiles/gmopen.dir/build.make CMakeFiles/gmopen.dir/src/gui/epoc.cpp.s
+.PHONY : src/gui/epoc.cpp.s
+
 src/gui/glcolor.o: src/gui/glcolor.cpp.o
 .PHONY : src/gui/glcolor.o
 
@@ -260,6 +332,30 @@ src/gui/moc_edge.s: src/gui/moc_edge.cxx.s
 src/gui/moc_edge.cxx.s:
 	$(MAKE) -f CMakeFiles/gmopen.dir/build.make CMakeFiles/gmopen.dir/src/gui/moc_edge.cxx.s
 .PHONY : src/gui/moc_edge.cxx.s
+
+src/gui/moc_epoc.o: src/gui/moc_epoc.cxx.o
+.PHONY : src/gui/moc_epoc.o
+
+# target to build an object file
+src/gui/moc_epoc.cxx.o:
+	$(MAKE) -f CMakeFiles/gmopen.dir/build.make CMakeFiles/gmopen.dir/src/gui/moc_epoc.cxx.o
+.PHONY : src/gui/moc_epoc.cxx.o
+
+src/gui/moc_epoc.i: src/gui/moc_epoc.cxx.i
+.PHONY : src/gui/moc_epoc.i
+
+# target to preprocess a source file
+src/gui/moc_epoc.cxx.i:
+	$(MAKE) -f CMakeFiles/gmopen.dir/build.make CMakeFiles/gmopen.dir/src/gui/moc_epoc.cxx.i
+.PHONY : src/gui/moc_epoc.cxx.i
+
+src/gui/moc_epoc.s: src/gui/moc_epoc.cxx.s
+.PHONY : src/gui/moc_epoc.s
+
+# target to generate assembly for a file
+src/gui/moc_epoc.cxx.s:
+	$(MAKE) -f CMakeFiles/gmopen.dir/build.make CMakeFiles/gmopen.dir/src/gui/moc_epoc.cxx.s
+.PHONY : src/gui/moc_epoc.cxx.s
 
 src/gui/moc_glcolor.o: src/gui/moc_glcolor.cxx.o
 .PHONY : src/gui/moc_glcolor.o
@@ -539,6 +635,15 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... epoc"
+	@echo "... driver/epoc.o"
+	@echo "... driver/epoc.i"
+	@echo "... driver/epoc.s"
+	@echo "... driver/epoc_libusb.o"
+	@echo "... driver/epoc_libusb.i"
+	@echo "... driver/epoc_libusb.s"
+	@echo "... src/gui/epoc.o"
+	@echo "... src/gui/epoc.i"
+	@echo "... src/gui/epoc.s"
 	@echo "... src/gui/glcolor.o"
 	@echo "... src/gui/glcolor.i"
 	@echo "... src/gui/glcolor.s"
@@ -551,6 +656,9 @@ help:
 	@echo "... src/gui/moc_edge.o"
 	@echo "... src/gui/moc_edge.i"
 	@echo "... src/gui/moc_edge.s"
+	@echo "... src/gui/moc_epoc.o"
+	@echo "... src/gui/moc_epoc.i"
+	@echo "... src/gui/moc_epoc.s"
 	@echo "... src/gui/moc_glcolor.o"
 	@echo "... src/gui/moc_glcolor.i"
 	@echo "... src/gui/moc_glcolor.s"

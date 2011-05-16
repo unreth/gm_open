@@ -47,7 +47,7 @@ typedef struct {
 /// Vendor ID for all omron health devices
 const static uint32_t EPOC_VID = 0x1234;
 /// Product ID for all omron health devices
-const static uint32_t EPOC_PID = 0xed02;
+const static uint32_t EPOC_PID = 0xe02;
 
 /// Out endpoint for all omron health devices
 const static uint32_t EPOC_OUT_ENDPT = 0x02;
@@ -83,7 +83,7 @@ EPOC_DECLSPEC int epoc_get_count(epoc_device* s, int device_vid, int device_pid)
 EPOC_DECLSPEC int epoc_open(epoc_device* s, int device_vid, int device_pid, unsigned int device_index);
 EPOC_DECLSPEC int epoc_close(epoc_device* s);
 EPOC_DECLSPEC void epoc_delete(epoc_device* dev);
-EPOC_DECLSPEC int epoc_read_data(epoc_device* dev, uint8_t* input_report);
+EPOC_DECLSPEC int epoc_read_data(epoc_device* dev, unsigned char* input_report);
 #ifdef __cplusplus
 };
 #endif

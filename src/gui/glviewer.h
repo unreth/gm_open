@@ -19,6 +19,7 @@
 #include <string>
 
 #include "mesh.h"
+#include "epoc.h"
 
 class glviewer : public QGLViewer  {
     Q_OBJECT

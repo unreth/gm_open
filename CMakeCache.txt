@@ -532,8 +532,8 @@ QT_UIC3_EXECUTABLE:FILEPATH=/usr/bin/uic3
 //Path to a program.
 QT_UIC_EXECUTABLE:FILEPATH=/usr/bin/uic
 
-//Dependencies for the target
-epoc_LIB_DEPENDS:STATIC=general;/usr/lib/libmcrypt.so;general;/usr/lib/libusb-1.0.so;
+//Dependencies for target
+epoc_LIB_DEPENDS:STATIC=
 
 //Value Computed by CMake
 gmopen_BINARY_DIR:STATIC=/home/unre/Desktop/gm_open

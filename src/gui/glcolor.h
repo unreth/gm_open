@@ -64,14 +64,11 @@ public:
     static glcolor * getInstance ();
     inline glcolor() {
         //draw
-        epsilon = 0.25;
+        epsilon = 1;
         points = true;
         lines = false;
         bg = vec3Df(1,1,1);
         int initcolor = 3;
-
-
-
 
         //eeg
         for(int i=0; i<eegcoord::ntheta; i++){    //theta
@@ -99,15 +96,18 @@ public:
     inline void setPoints(bool p)   { this->points = p;  }
     inline void setLines(bool l)    { this->lines = l;   }
     inline void setBg(vec3Df b)     { this->bg = b;      }
-    inline void setEeg(int i, int j, GLfloat r,GLfloat g,GLfloat b) {
-        eeg[i][j][0] = r;
-        eeg[i][j][1] = g;
-        eeg[i][j][2] = b;
+    inline void setEeg(int i, int j, float eegsensor) {
+        if(eegsensor > 1) eegsensor = 1;
+        if(eegsensor < -1) eegsensor = -1;
+        eeg[i][j][0] = 0.5*(1+eegsensor);
+        eeg[i][j][1] = 0.5*(1+eegsensor);
+        eeg[i][j][2] = 0;
     }
 
     //UPDATE
     inline void updateEeg() {
-        //interpolation of virtual sensors
+        //TODO!
+        //interpolation of virtual sensors, for non-point modes
         for(int i=0; i<eegcoord::ntheta; i++){
             for(int j=0; j<eegcoord::nphi; j++){
 
@@ -124,17 +124,15 @@ public:
         int iround = round(i);
         int jround = round(j);
 
-        if(eegc.sensor[iround][jround]){
-            if(!points || (abs(i-iround)<epsilon && abs(j-jround)<epsilon)){    //points
-            if(!lines  || (abs(i-iround)<epsilon || abs(j-jround)<epsilon)){    //lines
-                if(i>=0 && i<eegcoord::ntheta-1 && j>=0 && j<eegcoord::nphi-1){                     //working area
-                    vec3Df ret = eeg[(int)i][(int)j];
-                    ret += (i-(int)i)*(eeg[(int)i+1][(int)j]-eeg[(int)i][(int)j]);
-                    ret += (j-(int)j)*(eeg[(int)i][(int)j+1]-eeg[(int)i][(int)j]);
-                    return ret;
-                } else return bg;
+        if(!points || (eegc.sensor[iround][jround] && abs(i-iround)<epsilon && abs(j-jround)<epsilon)){    //points
+        if(!lines  || (abs(i-iround)<epsilon || abs(j-jround)<epsilon)){    //lines
+            if(i>=0 && i<eegcoord::ntheta-1 && j>=0 && j<eegcoord::nphi-1){                     //working area
+                vec3Df ret = eeg[(int)i][(int)j];
+                ret += (i-(int)i)*(eeg[(int)i+1][(int)j]-eeg[(int)i][(int)j]);
+                ret += (j-(int)j)*(eeg[(int)i][(int)j+1]-eeg[(int)i][(int)j]);
+                return ret;
             } else return bg;
-            } else return bg;
+        } else return bg;
         } else return bg;
     }
 };

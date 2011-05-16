@@ -17,21 +17,11 @@ window::window () : QMainWindow (NULL) {
     
     setMinimumWidth (800);
     setMinimumHeight (400);
+
+    epoc * edriver = epoc::getInstance();
+    edriver->start();
 }
 
 window::~window () {
 
-}
-
-void window::renderRayImage () {
-    
-}
-
-void window::setBGColor () {
-    QColor c = QColorDialog::getColor (QColor (133, 152, 181), this);
-    if (c.isValid () == true) {
-        cout << c.red () << endl;
-        viewer->setBackgroundColor (c);
-        viewer->updateGL ();
-    }
 }

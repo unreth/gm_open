@@ -8,14 +8,16 @@ HEADERS = window.h \
           vertex.h \
           triangle.h \
           mesh.h \
-          glcolor.h
+          glcolor.h \
+    epoc.h
 
 SOURCES = window.cpp \
           glviewer.cpp \
           vertex.cpp \
           triangle.cpp \
           mesh.cpp \
-          glcolor.cpp
+          glcolor.cpp \
+    epoc.cpp
 
 DESTDIR = .
 

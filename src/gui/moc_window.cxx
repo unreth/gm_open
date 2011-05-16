@@ -23,22 +23,18 @@ static const uint qt_meta_data_window[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       0,    0, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
 
- // slots: signature, parameters, type, tag, flags
-       8,    7,    7,    7, 0x0a,
-      25,    7,    7,    7, 0x0a,
-
        0        // eod
 };
 
 static const char qt_meta_stringdata_window[] = {
-    "window\0\0renderRayImage()\0setBGColor()\0"
+    "window\0"
 };
 
 const QMetaObject window::staticMetaObject = {
@@ -68,14 +64,6 @@ int window::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     _id = QMainWindow::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
-    if (_c == QMetaObject::InvokeMetaMethod) {
-        switch (_id) {
-        case 0: renderRayImage(); break;
-        case 1: setBGColor(); break;
-        default: ;
-        }
-        _id -= 2;
-    }
     return _id;
 }
 QT_END_MOC_NAMESPACE

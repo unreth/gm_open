@@ -8,7 +8,6 @@ IF(WIN32)
 ELSE()
   ADD_LIBRARY (epoc STATIC epoc.c epoc_libusb.c) 
 ENDIF()
-target_link_libraries (epoc ${LIBS}) 
 
 INSTALL (TARGETS epoc
   LIBRARY DESTINATION lib

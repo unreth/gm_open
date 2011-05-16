@@ -19,12 +19,7 @@ public:
 
     static void showStatusMessage (const QString & msg);  
     
-public slots :
-    void renderRayImage ();
-    void setBGColor ();
-    
 private :
-    
     QActionGroup * actionGroup;
     QString currentDirectory;
 
