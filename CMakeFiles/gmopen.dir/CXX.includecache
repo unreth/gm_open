@@ -10,6 +10,10 @@
 map
 -
 
+/home/unre/Desktop/gm_open/src/gui/glcolor.cpp
+glcolor.h
+/home/unre/Desktop/gm_open/src/gui/glcolor.h
+
 /home/unre/Desktop/gm_open/src/gui/glcolor.h
 QGLViewer/qglviewer.h
 -
@@ -44,6 +48,10 @@ string
 mesh.h
 /home/unre/Desktop/gm_open/src/gui/mesh.h
 
+/home/unre/Desktop/gm_open/src/gui/mesh.cpp
+mesh.h
+/home/unre/Desktop/gm_open/src/gui/mesh.h
+
 /home/unre/Desktop/gm_open/src/gui/mesh.h
 GLUT/glut.h
 -
@@ -70,6 +78,8 @@ edge.h
 glcolor.h
 /home/unre/Desktop/gm_open/src/gui/glcolor.h
 
+/home/unre/Desktop/gm_open/src/gui/moc_glcolor.cxx
+
 /home/unre/Desktop/gm_open/src/gui/moc_glviewer.cxx
 glviewer.h
 /home/unre/Desktop/gm_open/src/gui/glviewer.h
@@ -85,6 +95,10 @@ iostream
 /home/unre/Desktop/gm_open/src/gui/vec3D.h
 math.h
 -
+
+/home/unre/Desktop/gm_open/src/gui/vertex.cpp
+vertex.h
+/home/unre/Desktop/gm_open/src/gui/vertex.h
 
 /home/unre/Desktop/gm_open/src/gui/vertex.h
 iostream

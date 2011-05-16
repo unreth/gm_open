@@ -81,7 +81,7 @@ int main(int argc, char** argv){
         vec3Df pos;
         input >> pos;
 
-        matrix r(-5,vec3Df(0,0,1));
+        matrix r(0,vec3Df(0,0,1));
         pos = r*pos;
         output << pos << endl;
     }

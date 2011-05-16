@@ -1,10 +1,10 @@
 #include "glcolor.h"
 
-static glcolor * instance = NULL;
+static glcolor * glcolorinstance = NULL;
 
 glcolor * glcolor::getInstance () {
-    if (instance == NULL){
-        instance = new glcolor ();
+    if (glcolorinstance == NULL){
+        glcolorinstance = new glcolor ();
     }
-    return instance;
+    return glcolorinstance;
 }

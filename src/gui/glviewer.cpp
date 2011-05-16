@@ -18,7 +18,7 @@ void glviewer::setRenderingMode (bool m) {
 }
 
 void glviewer::keyPressEvent (QKeyEvent * /*event*/)   {
-    camera()->frame()->rotate(1,1,1,1);
+//    camera()->frame()->rotate(1,1,1,1);
 }
 void glviewer::keyReleaseEvent (QKeyEvent * /*event*/) {}
 

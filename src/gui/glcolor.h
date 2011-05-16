@@ -10,83 +10,91 @@
 using namespace std;
 
 class eegcoord {
-    //emotiv epoc: AF3, F7, F3, FC5, T7, P7, O1, O2, P8, T8, FC6, F4, F8, AF4.
+public:
+    static const int ntheta = 9;
+    static const float inittheta = 16.66;
+    static const float steptheta = 18.75;
+    static const int nphi = 9;
+    static const float initphi = 0;
+    static const float stepphi = 22.5;
 
-    static const int FP1i= 0;
-    static const int FP2i= 0;
-    static const int F7i = 1;
-    static const int F3i = 1;
-    static const int Fzi = 1;
-    static const int F4i = 1;
-    static const int F8i = 1;
-    static const int T3i = 2;
-    static const int C3i = 2;
-    static const int Czi = 2;
-    static const int C4i = 2;
-    static const int T4i = 2;
-    static const int T5i = 3;
-    static const int P3i = 3;
-    static const int Pzi = 3;
-    static const int P4i = 3;
-    static const int T6i = 3;
-    static const int O1i = 4;
-    static const int O2i = 4;
+    static const int iAF = 1;
+    static const int iF =  2;
+    static const int iFC = 3;
+    static const int iT =  4;
+    static const int iP =  6;
+    static const int iO =  8;
 
-    static const int FP1j= 0;
-    static const int FP2j= 4;
-    static const int F7j = 0;
-    static const int F3j = 1;
-    static const int Fzj = 2;
-    static const int F4j = 3;
-    static const int F8j = 4;
-    static const int T3j = 0;
-    static const int C3j = 1;
-    static const int Czj = 2;
-    static const int C4j = 3;
-    static const int T4j = 4;
-    static const int T5j = 0;
-    static const int P3j = 1;
-    static const int Pzj = 2;
-    static const int P4j = 3;
-    static const int T6j = 4;
-    static const int O1j = 0;
-    static const int O2j = 4;
+    static const int j7 = 0;
+    static const int j5 = 1;
+    static const int j3 = 2;
+    static const int j1 = 3;
+    static const int j2 = 5;
+    static const int j4 = 6;
+    static const int j6 = 7;
+    static const int j8 = 8;
 
+    bool sensor[9][9];
+
+    inline eegcoord(){
+        for(int i=0; i<9; i++)
+            for(int j=0; j<9; j++)
+                sensor[i][j]=false;
+        sensor[iAF][j3] = true;        sensor[iAF][j4] = true;
+        sensor[iF ][j7] = true;        sensor[iF ][j8] = true;
+        sensor[iF ][j3] = true;        sensor[iF ][j4] = true;
+        sensor[iFC][j5] = true;        sensor[iFC][j6] = true;
+        sensor[iT ][j7] = true;        sensor[iT ][j8] = true;
+        sensor[iP ][j7] = true;        sensor[iP ][j8] = true;
+        sensor[iO ][j1] = true;        sensor[iO ][j2] = true;
+    }
 };
 
-class glcolor
-{
+class glcolor {
 public:
-    static const int ntheta = 5;
-    static const float steptheta = 33.33;
-    static const float inittheta = 16.66;
-    static const int nphi = 6;
-    static const float initphi = 0;
-    static const float stepphi = 34;
-
     float epsilon;
     bool points;
     bool lines;
     vec3Df bg;
-    vec3Df eeg[5][6];
+    vec3Df eeg[eegcoord::ntheta][eegcoord::nphi];
 
+    eegcoord eegc;
+
+    //INITIALIZATION
     static glcolor * getInstance ();
-
     inline glcolor() {
-        epsilon = 0.1;
-        points = false;
+        //draw
+        epsilon = 0.25;
+        points = true;
         lines = false;
         bg = vec3Df(1,1,1);
+        int initcolor = 3;
 
-        for(int i=0; i<ntheta; i++){    //theta
-            for(int j=0; j<nphi; j++){  //phi
-//                eeg[i][j] = vec3Df(1,1,1);                                                          //blanc
-                eeg[i][j] = vec3Df(i/(float)(ntheta-1),i/(float)(ntheta-1),i/(float)(ntheta-1));    //theta
-                eeg[i][j] = vec3Df(j/(float)(nphi-1),j/(float)(nphi-1),j/(float)(nphi-1));          //phi
-//                eeg[i][j] = vec3Df(i/(float)(ntheta-1),j/(float)(nphi-1),0);                        //theta,phi
+
+
+
+        //eeg
+        for(int i=0; i<eegcoord::ntheta; i++){    //theta
+            for(int j=0; j<eegcoord::nphi; j++){  //phi
+                switch(initcolor){
+                case 0:
+                    eeg[i][j] = vec3Df(0,0,0);                                                                                          //back
+                    break;
+                case 1:
+                    eeg[i][j] = vec3Df(i/(float)(eegcoord::ntheta-1),i/(float)(eegcoord::ntheta-1),i/(float)(eegcoord::ntheta-1));      //theta
+                    break;
+                case 2:
+                    eeg[i][j] = vec3Df(j/(float)(eegcoord::nphi-1),j/(float)(eegcoord::nphi-1),j/(float)(eegcoord::nphi-1));            //phi
+                    break;
+                case 3:
+                    eeg[i][j] = vec3Df(i/(float)(eegcoord::ntheta-1),j/(float)(eegcoord::nphi-1),0);                                    //theta,phi
+                    break;
+                }
             }
         }
     }
+
+    //SET
     inline void setEpsilon(float e) { this->epsilon = e; }
     inline void setPoints(bool p)   { this->points = p;  }
     inline void setLines(bool l)    { this->lines = l;   }
@@ -96,19 +104,37 @@ public:
         eeg[i][j][1] = g;
         eeg[i][j][2] = b;
     }
-    inline vec3Df getColor(float & theta, float & phi){
-        float i = (theta-inittheta)/steptheta;
-        float j = (phi-initphi)/stepphi;
 
-        if(!points || (abs(i-(int)i)<epsilon && abs(j-(int)j)<epsilon)){    //points
-        if(!lines  || (abs(i-(int)i)<epsilon || abs(j-(int)j)<epsilon)){    //lines
-            if(i>=0 && i<ntheta-1 && j>=0 && j<nphi-1){                     //working area
-                vec3Df ret = eeg[(int)i][(int)j];
-                ret += (i-(int)i)*(eeg[(int)i+1][(int)j]-eeg[(int)i][(int)j]);
-                ret += (j-(int)j)*(eeg[(int)i][(int)j+1]-eeg[(int)i][(int)j]);
-                return ret;
+    //UPDATE
+    inline void updateEeg() {
+        //interpolation of virtual sensors
+        for(int i=0; i<eegcoord::ntheta; i++){
+            for(int j=0; j<eegcoord::nphi; j++){
+
+            }
+        }
+    }
+
+    //GET
+    inline vec3Df getColor(float & theta, float & phi){
+        eegc = eegcoord();
+
+        float i = (theta-eegcoord::inittheta)/eegcoord::steptheta;
+        float j = (phi-eegcoord::initphi)/eegcoord::stepphi;
+        int iround = round(i);
+        int jround = round(j);
+
+        if(eegc.sensor[iround][jround]){
+            if(!points || (abs(i-iround)<epsilon && abs(j-jround)<epsilon)){    //points
+            if(!lines  || (abs(i-iround)<epsilon || abs(j-jround)<epsilon)){    //lines
+                if(i>=0 && i<eegcoord::ntheta-1 && j>=0 && j<eegcoord::nphi-1){                     //working area
+                    vec3Df ret = eeg[(int)i][(int)j];
+                    ret += (i-(int)i)*(eeg[(int)i+1][(int)j]-eeg[(int)i][(int)j]);
+                    ret += (j-(int)j)*(eeg[(int)i][(int)j+1]-eeg[(int)i][(int)j]);
+                    return ret;
+                } else return bg;
             } else return bg;
-        } else return bg;
+            } else return bg;
         } else return bg;
     }
 };
