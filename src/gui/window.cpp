@@ -19,6 +19,8 @@ window::window () : QMainWindow (NULL) {
     setMinimumHeight (400);
 
     epoc * edriver = epoc::getInstance();
+    edriver->setmesh(mesh::getInstance()); //multithread problems?
+    edriver->setglviewer(viewer);
     edriver->start();
 }
 

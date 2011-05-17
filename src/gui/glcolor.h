@@ -13,10 +13,10 @@ class eegcoord {
 public:
     static const int ntheta = 9;
     static const float inittheta = 16.66;
-    static const float steptheta = 18.75;
+    static const float steptheta = 18.75;   // angle total = (init-1)*step = 150
     static const int nphi = 9;
-    static const float initphi = 0;
-    static const float stepphi = 22.5;
+    static const float initphi = -5;
+    static const float stepphi = 23.75;     // angle total = (init-1)*step = 190
 
     static const int iAF = 1;
     static const int iF =  2;
@@ -64,11 +64,11 @@ public:
     static glcolor * getInstance ();
     inline glcolor() {
         //draw
-        epsilon = 1;
+        epsilon = 0.4;
         points = true;
         lines = false;
         bg = vec3Df(1,1,1);
-        int initcolor = 3;
+        int initcolor = 0;
 
         //eeg
         for(int i=0; i<eegcoord::ntheta; i++){    //theta
@@ -119,8 +119,10 @@ public:
     inline vec3Df getColor(float & theta, float & phi){
         eegc = eegcoord();
 
-        float i = (theta-eegcoord::inittheta)/eegcoord::steptheta;
-        float j = (phi-eegcoord::initphi)/eegcoord::stepphi;
+        float difftheta = theta - eegcoord::inittheta;  if(difftheta<0) difftheta+=360; if(difftheta>=360) difftheta=difftheta-360;
+        float diffphi = phi   - eegcoord::initphi;      if(diffphi  <0) diffphi  +=360; if(diffphi  >=360) diffphi  =diffphi  -360;
+        float i = (difftheta) /eegcoord::steptheta;
+        float j = (diffphi)   /eegcoord::stepphi;
         int iround = round(i);
         int jround = round(j);
 
