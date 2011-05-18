@@ -7,10 +7,15 @@ CMakeFiles/gmopen.dir/driver/epoc.c.o: driver/libepoc.h
 CMakeFiles/gmopen.dir/driver/epoc_libusb.c.o: driver/epoc_libusb.c
 CMakeFiles/gmopen.dir/driver/epoc_libusb.c.o: driver/libepoc.h
 
+CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: src/gui/edge.h
 CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: src/gui/epoc.cpp
 CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: src/gui/epoc.h
 CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: src/gui/glcolor.h
+CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: src/gui/glviewer.h
+CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: src/gui/mesh.h
+CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: src/gui/triangle.h
 CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: src/gui/vec3D.h
+CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: src/gui/vertex.h
 CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: /usr/include/QtCore/QThread
 CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: /usr/include/QtCore/qthread.h
 CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: driver/libepoc.h

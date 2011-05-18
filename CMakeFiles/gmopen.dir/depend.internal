@@ -8,10 +8,15 @@ CMakeFiles/gmopen.dir/driver/epoc_libusb.c.o
  /home/unre/Desktop/gm_open/driver/epoc_libusb.c
  /home/unre/Desktop/gm_open/driver/libepoc.h
 CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o
+ /home/unre/Desktop/gm_open/src/gui/edge.h
  /home/unre/Desktop/gm_open/src/gui/epoc.cpp
  /home/unre/Desktop/gm_open/src/gui/epoc.h
  /home/unre/Desktop/gm_open/src/gui/glcolor.h
+ /home/unre/Desktop/gm_open/src/gui/glviewer.h
+ /home/unre/Desktop/gm_open/src/gui/mesh.h
+ /home/unre/Desktop/gm_open/src/gui/triangle.h
  /home/unre/Desktop/gm_open/src/gui/vec3D.h
+ /home/unre/Desktop/gm_open/src/gui/vertex.h
  /usr/include/QtCore/QThread
  /usr/include/QtCore/qthread.h
  driver/libepoc.h

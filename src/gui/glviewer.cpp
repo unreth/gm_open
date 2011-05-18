@@ -17,9 +17,7 @@ void glviewer::setRenderingMode (bool m) {
     updateGL ();
 }
 
-void glviewer::keyPressEvent (QKeyEvent * /*event*/)   {
-    //camera()->revolveAroundPoint();
-}
+void glviewer::keyPressEvent (QKeyEvent * /*event*/)   {}
 void glviewer::keyReleaseEvent (QKeyEvent * /*event*/) {}
 
 void glviewer::init() {

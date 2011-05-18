@@ -18,7 +18,9 @@ window::window () : QMainWindow (NULL) {
     setMinimumWidth (800);
     setMinimumHeight (400);
 
-    epoc::getInstance()->start();
+    epoc * e = epoc::getInstance();
+    e->setglv(viewer);
+    e->start();
 }
 
 window::~window () {

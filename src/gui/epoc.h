@@ -8,19 +8,23 @@
 
 #include "glcolor.h"
 #include "driver/libepoc.h"
+#include "glviewer.h"
 
 using namespace std;
 
+class glviewer;
 class epoc : public QThread
 {
 public:
     static epoc * getInstance ();
     inline epoc() { read = true; }
 
+    inline void setglv(glviewer * glv) { this->glv = glv; }
     void run();
 
 private:
     bool read;
+    glviewer * glv;
 };
 
 #endif // EPOC_H

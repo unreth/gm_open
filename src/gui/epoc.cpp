@@ -1,4 +1,7 @@
 #include "epoc.h"
+#include <QGLViewer/quaternion.h>
+
+using namespace qglviewer;
 
 static epoc * instance = NULL;
 
@@ -51,19 +54,30 @@ void epoc::run(){
         if(epoc_read_data(d, (uint8_t*)data) > 0 )
         {
             epoc_get_next_frame(&frame, (unsigned char*)data);
-            glc->setEeg(eegcoord::iF,   eegcoord::j3,(frame.F3 -8540)/10000.);
-            glc->setEeg(eegcoord::iFC,  eegcoord::j6,(frame.FC6-8250)/10000.);
-            glc->setEeg(eegcoord::iP,   eegcoord::j7,(frame.P7 -8380)/10000.);
-            glc->setEeg(eegcoord::iT,   eegcoord::j8,(frame.T8 -7700)/10000.);
-            glc->setEeg(eegcoord::iF,   eegcoord::j7,(frame.F7 -8315)/10000.);
-            glc->setEeg(eegcoord::iF,   eegcoord::j8,(frame.F8 -8350)/10000.);
-            glc->setEeg(eegcoord::iT,   eegcoord::j7,(frame.T7 -8980)/10000.);
-            glc->setEeg(eegcoord::iP,   eegcoord::j8,(frame.P8 -0   )/10000.);    //strange raw values!
-            glc->setEeg(eegcoord::iF,   eegcoord::j4,(frame.F4 -8620)/10000.);
-            glc->setEeg(eegcoord::iAF,  eegcoord::j3,(frame.AF3-8265)/10000.);
-            glc->setEeg(eegcoord::iO,   eegcoord::j2,(frame.O2 -8950)/10000.);
-            glc->setEeg(eegcoord::iO,   eegcoord::j1,(frame.O1 -8075)/10000.);
-            glc->setEeg(eegcoord::iFC,  eegcoord::j5,(frame.FC5-8700)/10000.);
+
+            //eeg data update
+            glc->setEeg(eegcoord::iF,   eegcoord::j3,(frame.F3 -8540)/200.);
+            glc->setEeg(eegcoord::iFC,  eegcoord::j6,(frame.FC6-8250)/200.);
+            glc->setEeg(eegcoord::iP,   eegcoord::j7,(frame.P7 -8380)/200.);
+            glc->setEeg(eegcoord::iT,   eegcoord::j8,(frame.T8 -7700)/200.);
+            glc->setEeg(eegcoord::iF,   eegcoord::j7,(frame.F7 -8315)/200.);
+            glc->setEeg(eegcoord::iF,   eegcoord::j8,(frame.F8 -8350)/200.);
+            glc->setEeg(eegcoord::iT,   eegcoord::j7,(frame.T7 -8980)/200.);
+            glc->setEeg(eegcoord::iP,   eegcoord::j8,(frame.P8 -0   )/200.);    //strange raw values!
+            glc->setEeg(eegcoord::iF,   eegcoord::j4,(frame.F4 -8620)/200.);
+            glc->setEeg(eegcoord::iAF,  eegcoord::j3,(frame.AF3-8265)/200.);
+            glc->setEeg(eegcoord::iO,   eegcoord::j2,(frame.O2 -8950)/200.);
+            glc->setEeg(eegcoord::iO,   eegcoord::j1,(frame.O1 -8075)/200.);
+            glc->setEeg(eegcoord::iFC,  eegcoord::j5,(frame.FC5-8700)/200.);
+
+            //gyroscope update
+            Quaternion camorientation = glv->camera()->orientation();
+            Vec camaxis;
+            float camangle;
+            camorientation.getAxisAngle(camaxis,camangle);
+            camorientation.setAxisAngle(camaxis,camangle+(int)frame.gyroY/5000.);
+            glv->camera()->setOrientation   (camorientation);
+            glv->camera()->setPosition      (glv->camera()->position()   );
         }
     }
 
