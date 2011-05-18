@@ -23,7 +23,7 @@ static const uint qt_meta_data_glviewer[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       1,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,14 +32,12 @@ static const uint qt_meta_data_glviewer[] = {
 
  // slots: signature, parameters, type, tag, flags
       12,   10,    9,    9, 0x0a,
-      35,    9,    9,    9, 0x0a,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_glviewer[] = {
     "glviewer\0\0m\0setRenderingMode(bool)\0"
-    "publicdraw()\0"
 };
 
 const QMetaObject glviewer::staticMetaObject = {
@@ -72,10 +70,9 @@ int glviewer::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: setRenderingMode((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 1: publicdraw(); break;
         default: ;
         }
-        _id -= 2;
+        _id -= 1;
     }
     return _id;
 }

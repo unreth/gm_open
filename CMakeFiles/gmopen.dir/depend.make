@@ -7,18 +7,11 @@ CMakeFiles/gmopen.dir/driver/epoc.c.o: driver/libepoc.h
 CMakeFiles/gmopen.dir/driver/epoc_libusb.c.o: driver/epoc_libusb.c
 CMakeFiles/gmopen.dir/driver/epoc_libusb.c.o: driver/libepoc.h
 
-CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: src/gui/edge.h
 CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: src/gui/epoc.cpp
 CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: src/gui/epoc.h
 CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: src/gui/glcolor.h
-CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: src/gui/glviewer.h
-CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: src/gui/mesh.h
-CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: src/gui/triangle.h
 CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: src/gui/vec3D.h
-CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: src/gui/vertex.h
-CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: /usr/include/QtCore/QSemaphore
 CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: /usr/include/QtCore/QThread
-CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: /usr/include/QtCore/qsemaphore.h
 CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: /usr/include/QtCore/qthread.h
 CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: driver/libepoc.h
 
@@ -35,9 +28,7 @@ CMakeFiles/gmopen.dir/src/gui/glviewer.cpp.o: src/gui/mesh.h
 CMakeFiles/gmopen.dir/src/gui/glviewer.cpp.o: src/gui/triangle.h
 CMakeFiles/gmopen.dir/src/gui/glviewer.cpp.o: src/gui/vec3D.h
 CMakeFiles/gmopen.dir/src/gui/glviewer.cpp.o: src/gui/vertex.h
-CMakeFiles/gmopen.dir/src/gui/glviewer.cpp.o: /usr/include/QtCore/QSemaphore
 CMakeFiles/gmopen.dir/src/gui/glviewer.cpp.o: /usr/include/QtCore/QThread
-CMakeFiles/gmopen.dir/src/gui/glviewer.cpp.o: /usr/include/QtCore/qsemaphore.h
 CMakeFiles/gmopen.dir/src/gui/glviewer.cpp.o: /usr/include/QtCore/qthread.h
 CMakeFiles/gmopen.dir/src/gui/glviewer.cpp.o: driver/libepoc.h
 
@@ -48,8 +39,6 @@ CMakeFiles/gmopen.dir/src/gui/mesh.cpp.o: src/gui/mesh.h
 CMakeFiles/gmopen.dir/src/gui/mesh.cpp.o: src/gui/triangle.h
 CMakeFiles/gmopen.dir/src/gui/mesh.cpp.o: src/gui/vec3D.h
 CMakeFiles/gmopen.dir/src/gui/mesh.cpp.o: src/gui/vertex.h
-CMakeFiles/gmopen.dir/src/gui/mesh.cpp.o: /usr/include/QtCore/QSemaphore
-CMakeFiles/gmopen.dir/src/gui/mesh.cpp.o: /usr/include/QtCore/qsemaphore.h
 
 CMakeFiles/gmopen.dir/src/gui/moc_edge.cxx.o: src/gui/moc_edge.cxx
 
@@ -66,9 +55,7 @@ CMakeFiles/gmopen.dir/src/gui/moc_glviewer.cxx.o: src/gui/moc_glviewer.cxx
 CMakeFiles/gmopen.dir/src/gui/moc_glviewer.cxx.o: src/gui/triangle.h
 CMakeFiles/gmopen.dir/src/gui/moc_glviewer.cxx.o: src/gui/vec3D.h
 CMakeFiles/gmopen.dir/src/gui/moc_glviewer.cxx.o: src/gui/vertex.h
-CMakeFiles/gmopen.dir/src/gui/moc_glviewer.cxx.o: /usr/include/QtCore/QSemaphore
 CMakeFiles/gmopen.dir/src/gui/moc_glviewer.cxx.o: /usr/include/QtCore/QThread
-CMakeFiles/gmopen.dir/src/gui/moc_glviewer.cxx.o: /usr/include/QtCore/qsemaphore.h
 CMakeFiles/gmopen.dir/src/gui/moc_glviewer.cxx.o: /usr/include/QtCore/qthread.h
 CMakeFiles/gmopen.dir/src/gui/moc_glviewer.cxx.o: driver/libepoc.h
 
@@ -90,9 +77,7 @@ CMakeFiles/gmopen.dir/src/gui/moc_window.cxx.o: src/gui/triangle.h
 CMakeFiles/gmopen.dir/src/gui/moc_window.cxx.o: src/gui/vec3D.h
 CMakeFiles/gmopen.dir/src/gui/moc_window.cxx.o: src/gui/vertex.h
 CMakeFiles/gmopen.dir/src/gui/moc_window.cxx.o: src/gui/window.h
-CMakeFiles/gmopen.dir/src/gui/moc_window.cxx.o: /usr/include/QtCore/QSemaphore
 CMakeFiles/gmopen.dir/src/gui/moc_window.cxx.o: /usr/include/QtCore/QThread
-CMakeFiles/gmopen.dir/src/gui/moc_window.cxx.o: /usr/include/QtCore/qsemaphore.h
 CMakeFiles/gmopen.dir/src/gui/moc_window.cxx.o: /usr/include/QtCore/qthread.h
 CMakeFiles/gmopen.dir/src/gui/moc_window.cxx.o: /usr/include/QtGui/QAction
 CMakeFiles/gmopen.dir/src/gui/moc_window.cxx.o: /usr/include/QtGui/QColorDialog
@@ -128,9 +113,7 @@ CMakeFiles/gmopen.dir/src/gui/window.cpp.o: src/gui/vec3D.h
 CMakeFiles/gmopen.dir/src/gui/window.cpp.o: src/gui/vertex.h
 CMakeFiles/gmopen.dir/src/gui/window.cpp.o: src/gui/window.cpp
 CMakeFiles/gmopen.dir/src/gui/window.cpp.o: src/gui/window.h
-CMakeFiles/gmopen.dir/src/gui/window.cpp.o: /usr/include/QtCore/QSemaphore
 CMakeFiles/gmopen.dir/src/gui/window.cpp.o: /usr/include/QtCore/QThread
-CMakeFiles/gmopen.dir/src/gui/window.cpp.o: /usr/include/QtCore/qsemaphore.h
 CMakeFiles/gmopen.dir/src/gui/window.cpp.o: /usr/include/QtCore/qthread.h
 CMakeFiles/gmopen.dir/src/gui/window.cpp.o: /usr/include/QtGui/QAction
 CMakeFiles/gmopen.dir/src/gui/window.cpp.o: /usr/include/QtGui/QColorDialog
@@ -158,9 +141,7 @@ CMakeFiles/gmopen.dir/src/main.cpp.o: src/gui/vec3D.h
 CMakeFiles/gmopen.dir/src/main.cpp.o: src/gui/vertex.h
 CMakeFiles/gmopen.dir/src/main.cpp.o: src/gui/window.h
 CMakeFiles/gmopen.dir/src/main.cpp.o: src/main.cpp
-CMakeFiles/gmopen.dir/src/main.cpp.o: /usr/include/QtCore/QSemaphore
 CMakeFiles/gmopen.dir/src/main.cpp.o: /usr/include/QtCore/QThread
-CMakeFiles/gmopen.dir/src/main.cpp.o: /usr/include/QtCore/qsemaphore.h
 CMakeFiles/gmopen.dir/src/main.cpp.o: /usr/include/QtCore/qthread.h
 CMakeFiles/gmopen.dir/src/main.cpp.o: /usr/include/QtGui/QAction
 CMakeFiles/gmopen.dir/src/main.cpp.o: /usr/include/QtGui/QApplication

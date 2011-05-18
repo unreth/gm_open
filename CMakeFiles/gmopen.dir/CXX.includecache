@@ -19,12 +19,8 @@ stdlib.h
 -
 QThread
 -
-glviewer.h
-/home/unre/Desktop/gm_open/src/gui/glviewer.h
 glcolor.h
 /home/unre/Desktop/gm_open/src/gui/glcolor.h
-mesh.h
-/home/unre/Desktop/gm_open/src/gui/mesh.h
 driver/libepoc.h
 /home/unre/Desktop/gm_open/src/gui/driver/libepoc.h
 
@@ -64,6 +60,10 @@ mesh.h
 epoc.h
 /home/unre/Desktop/gm_open/src/gui/epoc.h
 
+/home/unre/Desktop/gm_open/src/gui/mesh.cpp
+mesh.h
+/home/unre/Desktop/gm_open/src/gui/mesh.h
+
 /home/unre/Desktop/gm_open/src/gui/mesh.h
 GLUT/glut.h
 -
@@ -81,8 +81,6 @@ fstream
 -
 sstream
 -
-QSemaphore
--
 vertex.h
 /home/unre/Desktop/gm_open/src/gui/vertex.h
 triangle.h
@@ -95,6 +93,8 @@ glcolor.h
 /home/unre/Desktop/gm_open/src/gui/moc_glviewer.cxx
 glviewer.h
 /home/unre/Desktop/gm_open/src/gui/glviewer.h
+
+/home/unre/Desktop/gm_open/src/gui/moc_mesh.cxx
 
 /home/unre/Desktop/gm_open/src/gui/moc_window.cxx
 window.h
@@ -148,17 +148,9 @@ QPlastiqueStyle
 gui/window.h
 /home/unre/Desktop/gm_open/src/gui/window.h
 
-/usr/include/QtCore/QSemaphore
-qsemaphore.h
-/usr/include/QtCore/qsemaphore.h
-
 /usr/include/QtCore/QThread
 qthread.h
 /usr/include/QtCore/qthread.h
-
-/usr/include/QtCore/qsemaphore.h
-QtCore/qglobal.h
--
 
 /usr/include/QtCore/qthread.h
 QtCore/qobject.h

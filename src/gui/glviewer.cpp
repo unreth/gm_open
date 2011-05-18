@@ -17,7 +17,9 @@ void glviewer::setRenderingMode (bool m) {
     updateGL ();
 }
 
-void glviewer::keyPressEvent (QKeyEvent * /*event*/)   {}
+void glviewer::keyPressEvent (QKeyEvent * /*event*/)   {
+    //camera()->revolveAroundPoint();
+}
 void glviewer::keyReleaseEvent (QKeyEvent * /*event*/) {}
 
 void glviewer::init() {
@@ -33,17 +35,19 @@ void glviewer::init() {
     glEnable (GL_LIGHTING);
     glEnable (GL_COLOR_MATERIAL);
 
-    vec3Df c(-0.12808,-0.036755,0);
+    vec3Df c;
+//    vec3Df c(-0.12808,-0.036755,0);
     float r = 4.74445;
 
     setSceneCenter (qglviewer::Vec (c[0], c[1], c[2]));
     setSceneRadius (r);
     showEntireScene ();
+    startAnimation();   //automatic update!
 }
 
 void glviewer::draw () {
     mesh * mesh = mesh::getInstance();
-    mesh->renderGL(false);
+    mesh->renderGL();
 }
 
 

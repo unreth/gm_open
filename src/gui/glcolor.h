@@ -64,9 +64,9 @@ public:
     static glcolor * getInstance ();
     inline glcolor() {
         //draw
-        epsilon = 0.4;
+        epsilon = 0.2;
         points = true;
-        lines = false;
+        lines = true;
         bg = vec3Df(1,1,1);
         int initcolor = 0;
 
@@ -126,12 +126,12 @@ public:
         int iround = round(i);
         int jround = round(j);
 
-        if(!points || (eegc.sensor[iround][jround] && abs(i-iround)<epsilon && abs(j-jround)<epsilon)){    //points
-        if(!lines  || (abs(i-iround)<epsilon || abs(j-jround)<epsilon)){    //lines
-            if(i>=0 && i<eegcoord::ntheta-1 && j>=0 && j<eegcoord::nphi-1){                     //working area
-                vec3Df ret = eeg[(int)i][(int)j];
-                ret += (i-(int)i)*(eeg[(int)i+1][(int)j]-eeg[(int)i][(int)j]);
-                ret += (j-(int)j)*(eeg[(int)i][(int)j+1]-eeg[(int)i][(int)j]);
+        if(!points || (eegc.sensor[iround][jround] && abs(i-iround)<epsilon && abs(j-jround)<epsilon)){     //points
+        if(!lines  || (abs(i-iround)<epsilon || abs(j-jround)<epsilon)){                                    //lines
+            if(i>=0 && i<eegcoord::ntheta-1 && j>=0 && j<eegcoord::nphi-1){                                 //working area
+                vec3Df ret = eeg[iround][jround];
+//                ret += (i-(int)i)*(eeg[(int)i+1][(int)j]-eeg[(int)i][(int)j]);
+//                ret += (j-(int)j)*(eeg[(int)i][(int)j+1]-eeg[(int)i][(int)j]);
                 return ret;
             } else return bg;
         } else return bg;

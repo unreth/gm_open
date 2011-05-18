@@ -145,10 +145,7 @@ void mesh::markBorderEdges (edgeMapIndex & edgeMap) {
     } 
 }
 
-void mesh::renderGL(bool thread) const {
-    semaphore->acquire();
-//    if(thread)  cout << "thread epoc" << endl;
-//    else        cout << "thread glviewer" << endl;
+void mesh::renderGL() const {
     glBegin (GL_TRIANGLES);
     for (unsigned int i = 0; i < triangles.size (); i++) {
         const triangle & t = triangles[i];
@@ -163,7 +160,6 @@ void mesh::renderGL(bool thread) const {
             glVertex3f (v[j].getPos()[0],    v[j].getPos()[1],    v[j].getPos()[2]);
         }
     }
-    semaphore->release();
     glEnd ();
 }
 

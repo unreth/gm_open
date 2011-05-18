@@ -20,7 +20,6 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include <QSemaphore>
 
 #include "vertex.h"
 #include "triangle.h"
@@ -31,11 +30,10 @@ class mesh {
 public:
     static mesh * getInstance ();
     inline mesh () {
-//        loadOFF("models/brain.off");
+        loadOFF("models/brain.off");
 //        loadOFF("models/sphereL.off");
-        loadOFF("models/sphereM.off");
+//        loadOFF("models/sphereM.off");
 //        loadOFF("models/sphereX.off");
-        semaphore = new QSemaphore(1);
     }
     inline mesh (const std::vector<vertex> & v) 
         : vertices (v) {}
@@ -62,7 +60,7 @@ public:
     void computeDualEdgeMap (edgeMapIndex & dualVMap1, edgeMapIndex & dualVMap2);
     void markBorderEdges (edgeMapIndex & edgeMap);
     
-    void renderGL(bool thread) const;
+    void renderGL() const;
     void loadOFF (const std::string & filename);
     class Exception {
     private: 
@@ -77,8 +75,6 @@ private:
     glcolor glc;
     std::vector<vertex> vertices;
     std::vector<triangle> triangles;
-
-    QSemaphore * semaphore;
 };
 
 #endif // MESH_H

@@ -39,8 +39,8 @@ Building C object CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o
 /home/unre/Desktop/gm_open/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
 /home/unre/Desktop/gm_open/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:25: error: ‘Q_WS_QWS’ undeclared (first use in this function)
 /home/unre/Desktop/gm_open/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:25: note: each undeclared identifier is reported only once for each function it appears in
-gmake[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o] Error 1
 gmake[1]: Leaving directory `/home/unre/Desktop/gm_open/CMakeFiles/CMakeTmp'
+gmake[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o] Error 1
 gmake: *** [cmTryCompileExec/fast] Error 2
 
 File /home/unre/Desktop/gm_open/CMakeFiles/CMakeTmp/CheckSymbolExists.c:

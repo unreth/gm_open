@@ -2,6 +2,7 @@ gm_open project
 
 libs:
 - qt4
+- qglviewer
 - libmcrypt
 - libusb-1.0
 
