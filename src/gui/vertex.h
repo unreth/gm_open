@@ -18,10 +18,10 @@
 
 class vertex {
 public:
-    inline vertex () :                                          pos (vec3Df (0.0,0.0,0.0)), normal (vec3Df (0.0, 0.0, 1.0)), marked (false),    id (-1) {}
-    inline vertex (const vec3Df & pos) :                        pos (pos),                  normal (vec3Df (0.0, 0.0, 1.0)), marked (false),    id (-1) {}
-    inline vertex (const vec3Df & pos, const vec3Df & normal) : pos (pos),                  normal (normal),                 marked (false),    id (-1) {}
-    inline vertex (const vertex & v) :                          pos (v.pos),                normal (v.normal),               marked (v.marked), id (-1) {}
+    inline vertex () :                                          pos (vec3Df (0.0,0.0,0.0)), normal (vec3Df (0.0, 0.0, 1.0)), marked (false),    id (-1), phi(0), theta(0)           {}
+    inline vertex (const vec3Df & pos) :                        pos (pos),                  normal (vec3Df (0.0, 0.0, 1.0)), marked (false),    id (-1), phi(0), theta(0)           {}
+    inline vertex (const vec3Df & pos, const vec3Df & normal) : pos (pos),                  normal (normal),                 marked (false),    id (-1), phi(0), theta(0)           {}
+    inline vertex (const vertex & v) :                          pos (v.pos),                normal (v.normal),               marked (v.marked), id (-1), phi(v.phi), theta(v.theta) {}
     inline virtual ~vertex () {}
 
     inline void calcangles () {
@@ -53,6 +53,9 @@ public:
         normal = vertex.normal;
         marked = vertex.marked;
         id = -1;
+        color = vertex.color;
+        phi = vertex.phi;
+        theta = vertex.theta;
         return (*this);
     }
     inline const GLfloat & getR() const { return this->color[0]; }
@@ -91,4 +94,3 @@ private:
 extern std::ostream & operator<< (std::ostream & output, const vertex & v);
 
 #endif // VERTEX_H
-

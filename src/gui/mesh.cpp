@@ -153,7 +153,6 @@ void mesh::renderGL() const {
         for (unsigned int j = 0; j < 3; j++)
             v[j] = vertices[t.getVertex(j)];
         for (unsigned int j = 0; j < 3; j++){
-            v[j].calcangles();
             v[j].setcolor();
             glColor3f(v[j].getR(),v[j].getG(),v[j].getB());
             glNormal3f (v[j].getNormal()[0], v[j].getNormal()[1], v[j].getNormal()[2]);
@@ -178,7 +177,9 @@ void mesh::loadOFF (const std::string & filename){
     for (unsigned int i = 0; i < numOfVertices; i++) {
         vec3Df pos;
         input >> pos;
-        vertices.push_back (vertex (pos, vec3Df (1.0, 0.0, 0.0)));
+        vertex v(pos, vec3Df (1.0, 0.0, 0.0));
+        v.calcangles();
+        vertices.push_back (v);
     }
     for (unsigned int i = 0; i < numOfTriangles; i++) {
         unsigned int polygonSize;
