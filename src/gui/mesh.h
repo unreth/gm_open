@@ -30,7 +30,8 @@ class mesh {
 public:
     static mesh * getInstance ();
     inline mesh () {
-        loadOFF("models/brain.off");
+//        loadOFF("models/brain.off");
+        loadOFF("models/newbrain.off");
 //        loadOFF("models/sphereL.off");
 //        loadOFF("models/sphereM.off");
 //        loadOFF("models/sphereX.off");

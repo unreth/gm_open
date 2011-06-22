@@ -1,6 +1,7 @@
 #ifndef GLCOLOR_H
 #define GLCOLOR_H
 
+#include <QtXml/qdom.h>
 #include <QGLViewer/qglviewer.h>
 #include <iostream>
 #include <cmath>

@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <QThread>
+#include <QGLViewer/quaternion.h>
 
 #include "glcolor.h"
 #include "driver/libepoc.h"

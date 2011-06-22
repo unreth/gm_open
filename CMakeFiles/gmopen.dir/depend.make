@@ -23,6 +23,10 @@ CMakeFiles/gmopen.dir/src/gui/epoc.cpp.o: driver/libepoc.h
 CMakeFiles/gmopen.dir/src/gui/glcolor.cpp.o: src/gui/glcolor.cpp
 CMakeFiles/gmopen.dir/src/gui/glcolor.cpp.o: src/gui/glcolor.h
 CMakeFiles/gmopen.dir/src/gui/glcolor.cpp.o: src/gui/vec3D.h
+CMakeFiles/gmopen.dir/src/gui/glcolor.cpp.o: /usr/include/QtXml/QtXml
+CMakeFiles/gmopen.dir/src/gui/glcolor.cpp.o: /usr/include/QtXml/qdom.h
+CMakeFiles/gmopen.dir/src/gui/glcolor.cpp.o: /usr/include/QtXml/qxml.h
+CMakeFiles/gmopen.dir/src/gui/glcolor.cpp.o: /usr/include/QtXml/qxmlstream.h
 
 CMakeFiles/gmopen.dir/src/gui/glviewer.cpp.o: src/gui/edge.h
 CMakeFiles/gmopen.dir/src/gui/glviewer.cpp.o: src/gui/epoc.h
@@ -107,6 +111,10 @@ CMakeFiles/gmopen.dir/src/gui/vertex.cpp.o: src/gui/glcolor.h
 CMakeFiles/gmopen.dir/src/gui/vertex.cpp.o: src/gui/vec3D.h
 CMakeFiles/gmopen.dir/src/gui/vertex.cpp.o: src/gui/vertex.cpp
 CMakeFiles/gmopen.dir/src/gui/vertex.cpp.o: src/gui/vertex.h
+CMakeFiles/gmopen.dir/src/gui/vertex.cpp.o: /usr/include/QtXml/QtXml
+CMakeFiles/gmopen.dir/src/gui/vertex.cpp.o: /usr/include/QtXml/qdom.h
+CMakeFiles/gmopen.dir/src/gui/vertex.cpp.o: /usr/include/QtXml/qxml.h
+CMakeFiles/gmopen.dir/src/gui/vertex.cpp.o: /usr/include/QtXml/qxmlstream.h
 
 CMakeFiles/gmopen.dir/src/gui/window.cpp.o: src/gui/edge.h
 CMakeFiles/gmopen.dir/src/gui/window.cpp.o: src/gui/epoc.h

@@ -19,7 +19,7 @@ int main(int argc, char** argv){
     for (unsigned int i = 0; i < numOfVertices; i++) {
         vec3Df pos;
         input >> pos;
-        pos += vec3Df(0,1,0);
+        pos += -vec3Df(0.00126842,0.81138,-0.146771);
         output << pos << endl;
     }
     for (unsigned int i = 0; i < numOfTriangles; i++) {
@@ -33,8 +33,7 @@ int main(int argc, char** argv){
         }
         output << endl;
     }
-    input.close ();
-    output.close ();
+    input.close();
     output.close();
     return 0;
 }

@@ -1,5 +1,4 @@
 #include "epoc.h"
-#include <QGLViewer/quaternion.h>
 
 using namespace qglviewer;
 
@@ -48,6 +47,10 @@ void epoc::run(){
         return;
     }
     glcolor * glc = glcolor::getInstance();
+
+    float theta=0;
+    float phi=0;
+
     while(1)
     {
         while(!read);
@@ -71,13 +74,15 @@ void epoc::run(){
             glc->setEeg(eegcoord::iFC,  eegcoord::j5,(frame.FC5-8700)/200.);
 
             //gyroscope update
-            Quaternion camorientation = glv->camera()->orientation();
-            Vec camaxis;
-            float camangle;
-            camorientation.getAxisAngle(camaxis,camangle);
-            camorientation.setAxisAngle(camaxis,camangle+(int)frame.gyroY/5000.);
-            glv->camera()->setOrientation   (camorientation);
-            glv->camera()->setPosition      (glv->camera()->position()   );
+            Quaternion quatx(Vec(0,1,0),frame.gyroX/1000.);
+            glv->camera()->setPosition(quatx.rotate(glv->camera()->position()));
+            quatx *= glv->camera()->orientation();
+            glv->camera()->setOrientation(quatx);
+
+            Quaternion quaty(Vec(-1,0,0),frame.gyroY/500.);
+            glv->camera()->setPosition(quaty.rotate(glv->camera()->position()));
+            quaty *= glv->camera()->orientation();
+            glv->camera()->setOrientation(quaty);
         }
     }
 

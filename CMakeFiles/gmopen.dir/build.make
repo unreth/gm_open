@@ -598,10 +598,12 @@ gmopen: /usr/lib/libmcrypt.so
 gmopen: /usr/lib/libusb-1.0.so
 gmopen: /usr/lib/libQtOpenGL.so
 gmopen: /usr/lib/libQtGui.so
+gmopen: /usr/lib/libQtXml.so
 gmopen: /usr/lib/libQtCore.so
 gmopen: /usr/lib/libQtOpenGL.so
 gmopen: /usr/lib/libQGLViewer.so
 gmopen: /usr/lib/libQtGui.so
+gmopen: /usr/lib/libQtXml.so
 gmopen: /usr/lib/libQtCore.so
 gmopen: /usr/lib/libQGLViewer.so
 gmopen: CMakeFiles/gmopen.dir/build.make

@@ -3,11 +3,11 @@
 
 # compile C with /usr/bin/gcc
 # compile CXX with /usr/bin/c++
-C_FLAGS = -I/usr/local/include -I/usr/include/libusb-1.0 -I/driver -I/usr/include/QtOpenGL -I/usr/include/QtGui -I/usr/include/QtCore -I/home/unre/Desktop/gm_open  
+C_FLAGS = -I/usr/local/include -I/usr/include/libusb-1.0 -I/driver -I/usr/include/QtOpenGL -I/usr/include/QtGui -I/usr/include/QtXml -I/usr/include/QtCore -I/home/unre/Desktop/gm_open  
 
-C_DEFINES = -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB
+C_DEFINES = -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB
 
-CXX_FLAGS =  -DQGLVIEWER_FOUND -I/usr/local/include -I/usr/include/libusb-1.0 -I/driver -I/usr/include/QtOpenGL -I/usr/include/QtGui -I/usr/include/QtCore -I/home/unre/Desktop/gm_open  
+CXX_FLAGS =  -DQGLVIEWER_FOUND -I/usr/local/include -I/usr/include/libusb-1.0 -I/driver -I/usr/include/QtOpenGL -I/usr/include/QtGui -I/usr/include/QtXml -I/usr/include/QtCore -I/home/unre/Desktop/gm_open  
 
-CXX_DEFINES = -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB
+CXX_DEFINES = -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB
 

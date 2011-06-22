@@ -15,6 +15,7 @@ SET(CMAKE_C_INCLUDE_PATH
   "/driver"
   "/usr/include/QtOpenGL"
   "/usr/include/QtGui"
+  "/usr/include/QtXml"
   "/usr/include/QtCore"
   "."
   )

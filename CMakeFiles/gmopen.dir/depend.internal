@@ -24,6 +24,10 @@ CMakeFiles/gmopen.dir/src/gui/glcolor.cpp.o
  /home/unre/Desktop/gm_open/src/gui/glcolor.cpp
  /home/unre/Desktop/gm_open/src/gui/glcolor.h
  /home/unre/Desktop/gm_open/src/gui/vec3D.h
+ /usr/include/QtXml/QtXml
+ /usr/include/QtXml/qdom.h
+ /usr/include/QtXml/qxml.h
+ /usr/include/QtXml/qxmlstream.h
 CMakeFiles/gmopen.dir/src/gui/glviewer.cpp.o
  /home/unre/Desktop/gm_open/src/gui/edge.h
  /home/unre/Desktop/gm_open/src/gui/epoc.h
@@ -108,6 +112,10 @@ CMakeFiles/gmopen.dir/src/gui/vertex.cpp.o
  /home/unre/Desktop/gm_open/src/gui/vec3D.h
  /home/unre/Desktop/gm_open/src/gui/vertex.cpp
  /home/unre/Desktop/gm_open/src/gui/vertex.h
+ /usr/include/QtXml/QtXml
+ /usr/include/QtXml/qdom.h
+ /usr/include/QtXml/qxml.h
+ /usr/include/QtXml/qxmlstream.h
 CMakeFiles/gmopen.dir/src/gui/window.cpp.o
  /home/unre/Desktop/gm_open/src/gui/edge.h
  /home/unre/Desktop/gm_open/src/gui/epoc.h
