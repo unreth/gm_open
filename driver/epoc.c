@@ -119,8 +119,8 @@ int epoc_get_next_frame(struct epoc_frame* frame, unsigned char* raw_data) {
     frame->FC5 = get_level(raw_frame, FC5_MASK);
     
     //TODO!
-    frame->gyroX = raw_frame[29] - 102;
-    frame->gyroY = raw_frame[30] - 104;
+    frame->gyroX = raw_frame[29] - 101.5;
+    frame->gyroY = raw_frame[30] - 103.5;
     
     frame->battery = 0;
 }

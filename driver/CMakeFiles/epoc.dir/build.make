@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/unre/Desktop/gm_open
+CMAKE_SOURCE_DIR = /home/unre/workspace/qt/gm_open
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/unre/Desktop/gm_open
+CMAKE_BINARY_DIR = /home/unre/workspace/qt/gm_open
 
 # Include any dependencies generated for this target.
 include driver/CMakeFiles/epoc.dir/depend.make
@@ -51,17 +51,17 @@ include driver/CMakeFiles/epoc.dir/flags.make
 
 driver/CMakeFiles/epoc.dir/epoc.c.o: driver/CMakeFiles/epoc.dir/flags.make
 driver/CMakeFiles/epoc.dir/epoc.c.o: driver/epoc.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/unre/Desktop/gm_open/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/unre/workspace/qt/gm_open/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object driver/CMakeFiles/epoc.dir/epoc.c.o"
-	cd /home/unre/Desktop/gm_open/driver && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/epoc.dir/epoc.c.o   -c /home/unre/Desktop/gm_open/driver/epoc.c
+	cd /home/unre/workspace/qt/gm_open/driver && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/epoc.dir/epoc.c.o   -c /home/unre/workspace/qt/gm_open/driver/epoc.c
 
 driver/CMakeFiles/epoc.dir/epoc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/epoc.dir/epoc.c.i"
-	cd /home/unre/Desktop/gm_open/driver && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/unre/Desktop/gm_open/driver/epoc.c > CMakeFiles/epoc.dir/epoc.c.i
+	cd /home/unre/workspace/qt/gm_open/driver && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/unre/workspace/qt/gm_open/driver/epoc.c > CMakeFiles/epoc.dir/epoc.c.i
 
 driver/CMakeFiles/epoc.dir/epoc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/epoc.dir/epoc.c.s"
-	cd /home/unre/Desktop/gm_open/driver && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/unre/Desktop/gm_open/driver/epoc.c -o CMakeFiles/epoc.dir/epoc.c.s
+	cd /home/unre/workspace/qt/gm_open/driver && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/unre/workspace/qt/gm_open/driver/epoc.c -o CMakeFiles/epoc.dir/epoc.c.s
 
 driver/CMakeFiles/epoc.dir/epoc.c.o.requires:
 .PHONY : driver/CMakeFiles/epoc.dir/epoc.c.o.requires
@@ -75,17 +75,17 @@ driver/CMakeFiles/epoc.dir/epoc.c.o.provides.build: driver/CMakeFiles/epoc.dir/e
 
 driver/CMakeFiles/epoc.dir/epoc_libusb.c.o: driver/CMakeFiles/epoc.dir/flags.make
 driver/CMakeFiles/epoc.dir/epoc_libusb.c.o: driver/epoc_libusb.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/unre/Desktop/gm_open/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/unre/workspace/qt/gm_open/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object driver/CMakeFiles/epoc.dir/epoc_libusb.c.o"
-	cd /home/unre/Desktop/gm_open/driver && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/epoc.dir/epoc_libusb.c.o   -c /home/unre/Desktop/gm_open/driver/epoc_libusb.c
+	cd /home/unre/workspace/qt/gm_open/driver && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/epoc.dir/epoc_libusb.c.o   -c /home/unre/workspace/qt/gm_open/driver/epoc_libusb.c
 
 driver/CMakeFiles/epoc.dir/epoc_libusb.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/epoc.dir/epoc_libusb.c.i"
-	cd /home/unre/Desktop/gm_open/driver && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/unre/Desktop/gm_open/driver/epoc_libusb.c > CMakeFiles/epoc.dir/epoc_libusb.c.i
+	cd /home/unre/workspace/qt/gm_open/driver && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/unre/workspace/qt/gm_open/driver/epoc_libusb.c > CMakeFiles/epoc.dir/epoc_libusb.c.i
 
 driver/CMakeFiles/epoc.dir/epoc_libusb.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/epoc.dir/epoc_libusb.c.s"
-	cd /home/unre/Desktop/gm_open/driver && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/unre/Desktop/gm_open/driver/epoc_libusb.c -o CMakeFiles/epoc.dir/epoc_libusb.c.s
+	cd /home/unre/workspace/qt/gm_open/driver && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/unre/workspace/qt/gm_open/driver/epoc_libusb.c -o CMakeFiles/epoc.dir/epoc_libusb.c.s
 
 driver/CMakeFiles/epoc.dir/epoc_libusb.c.o.requires:
 .PHONY : driver/CMakeFiles/epoc.dir/epoc_libusb.c.o.requires
@@ -110,8 +110,8 @@ driver/libepoc.a: driver/CMakeFiles/epoc.dir/epoc_libusb.c.o
 driver/libepoc.a: driver/CMakeFiles/epoc.dir/build.make
 driver/libepoc.a: driver/CMakeFiles/epoc.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C static library libepoc.a"
-	cd /home/unre/Desktop/gm_open/driver && $(CMAKE_COMMAND) -P CMakeFiles/epoc.dir/cmake_clean_target.cmake
-	cd /home/unre/Desktop/gm_open/driver && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/epoc.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/unre/workspace/qt/gm_open/driver && $(CMAKE_COMMAND) -P CMakeFiles/epoc.dir/cmake_clean_target.cmake
+	cd /home/unre/workspace/qt/gm_open/driver && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/epoc.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 driver/CMakeFiles/epoc.dir/build: driver/libepoc.a
@@ -122,10 +122,10 @@ driver/CMakeFiles/epoc.dir/requires: driver/CMakeFiles/epoc.dir/epoc_libusb.c.o.
 .PHONY : driver/CMakeFiles/epoc.dir/requires
 
 driver/CMakeFiles/epoc.dir/clean:
-	cd /home/unre/Desktop/gm_open/driver && $(CMAKE_COMMAND) -P CMakeFiles/epoc.dir/cmake_clean.cmake
+	cd /home/unre/workspace/qt/gm_open/driver && $(CMAKE_COMMAND) -P CMakeFiles/epoc.dir/cmake_clean.cmake
 .PHONY : driver/CMakeFiles/epoc.dir/clean
 
 driver/CMakeFiles/epoc.dir/depend:
-	cd /home/unre/Desktop/gm_open && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/unre/Desktop/gm_open /home/unre/Desktop/gm_open/driver /home/unre/Desktop/gm_open /home/unre/Desktop/gm_open/driver /home/unre/Desktop/gm_open/driver/CMakeFiles/epoc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/unre/workspace/qt/gm_open && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/unre/workspace/qt/gm_open /home/unre/workspace/qt/gm_open/driver /home/unre/workspace/qt/gm_open /home/unre/workspace/qt/gm_open/driver /home/unre/workspace/qt/gm_open/driver/CMakeFiles/epoc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : driver/CMakeFiles/epoc.dir/depend
 

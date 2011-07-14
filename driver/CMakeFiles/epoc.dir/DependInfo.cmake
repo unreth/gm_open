@@ -4,8 +4,8 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
-  "/home/unre/Desktop/gm_open/driver/epoc.c" "/home/unre/Desktop/gm_open/driver/CMakeFiles/epoc.dir/epoc.c.o"
-  "/home/unre/Desktop/gm_open/driver/epoc_libusb.c" "/home/unre/Desktop/gm_open/driver/CMakeFiles/epoc.dir/epoc_libusb.c.o"
+  "/home/unre/workspace/qt/gm_open/driver/epoc.c" "/home/unre/workspace/qt/gm_open/driver/CMakeFiles/epoc.dir/epoc.c.o"
+  "/home/unre/workspace/qt/gm_open/driver/epoc_libusb.c" "/home/unre/workspace/qt/gm_open/driver/CMakeFiles/epoc.dir/epoc_libusb.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")
 

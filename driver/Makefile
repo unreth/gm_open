@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/unre/Desktop/gm_open
+CMAKE_SOURCE_DIR = /home/unre/workspace/qt/gm_open
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/unre/Desktop/gm_open
+CMAKE_BINARY_DIR = /home/unre/workspace/qt/gm_open
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -110,14 +110,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/unre/Desktop/gm_open && $(CMAKE_COMMAND) -E cmake_progress_start /home/unre/Desktop/gm_open/CMakeFiles /home/unre/Desktop/gm_open/driver/CMakeFiles/progress.marks
-	cd /home/unre/Desktop/gm_open && $(MAKE) -f CMakeFiles/Makefile2 driver/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/unre/Desktop/gm_open/CMakeFiles 0
+	cd /home/unre/workspace/qt/gm_open && $(CMAKE_COMMAND) -E cmake_progress_start /home/unre/workspace/qt/gm_open/CMakeFiles /home/unre/workspace/qt/gm_open/driver/CMakeFiles/progress.marks
+	cd /home/unre/workspace/qt/gm_open && $(MAKE) -f CMakeFiles/Makefile2 driver/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unre/workspace/qt/gm_open/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/unre/Desktop/gm_open && $(MAKE) -f CMakeFiles/Makefile2 driver/clean
+	cd /home/unre/workspace/qt/gm_open && $(MAKE) -f CMakeFiles/Makefile2 driver/clean
 .PHONY : clean
 
 # The main clean target
@@ -126,22 +126,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/unre/Desktop/gm_open && $(MAKE) -f CMakeFiles/Makefile2 driver/preinstall
+	cd /home/unre/workspace/qt/gm_open && $(MAKE) -f CMakeFiles/Makefile2 driver/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/unre/Desktop/gm_open && $(MAKE) -f CMakeFiles/Makefile2 driver/preinstall
+	cd /home/unre/workspace/qt/gm_open && $(MAKE) -f CMakeFiles/Makefile2 driver/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/unre/Desktop/gm_open && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/unre/workspace/qt/gm_open && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 driver/CMakeFiles/epoc.dir/rule:
-	cd /home/unre/Desktop/gm_open && $(MAKE) -f CMakeFiles/Makefile2 driver/CMakeFiles/epoc.dir/rule
+	cd /home/unre/workspace/qt/gm_open && $(MAKE) -f CMakeFiles/Makefile2 driver/CMakeFiles/epoc.dir/rule
 .PHONY : driver/CMakeFiles/epoc.dir/rule
 
 # Convenience name for target.
@@ -150,7 +150,7 @@ epoc: driver/CMakeFiles/epoc.dir/rule
 
 # fast build rule for target.
 epoc/fast:
-	cd /home/unre/Desktop/gm_open && $(MAKE) -f driver/CMakeFiles/epoc.dir/build.make driver/CMakeFiles/epoc.dir/build
+	cd /home/unre/workspace/qt/gm_open && $(MAKE) -f driver/CMakeFiles/epoc.dir/build.make driver/CMakeFiles/epoc.dir/build
 .PHONY : epoc/fast
 
 epoc.o: epoc.c.o
@@ -158,7 +158,7 @@ epoc.o: epoc.c.o
 
 # target to build an object file
 epoc.c.o:
-	cd /home/unre/Desktop/gm_open && $(MAKE) -f driver/CMakeFiles/epoc.dir/build.make driver/CMakeFiles/epoc.dir/epoc.c.o
+	cd /home/unre/workspace/qt/gm_open && $(MAKE) -f driver/CMakeFiles/epoc.dir/build.make driver/CMakeFiles/epoc.dir/epoc.c.o
 .PHONY : epoc.c.o
 
 epoc.i: epoc.c.i
@@ -166,7 +166,7 @@ epoc.i: epoc.c.i
 
 # target to preprocess a source file
 epoc.c.i:
-	cd /home/unre/Desktop/gm_open && $(MAKE) -f driver/CMakeFiles/epoc.dir/build.make driver/CMakeFiles/epoc.dir/epoc.c.i
+	cd /home/unre/workspace/qt/gm_open && $(MAKE) -f driver/CMakeFiles/epoc.dir/build.make driver/CMakeFiles/epoc.dir/epoc.c.i
 .PHONY : epoc.c.i
 
 epoc.s: epoc.c.s
@@ -174,7 +174,7 @@ epoc.s: epoc.c.s
 
 # target to generate assembly for a file
 epoc.c.s:
-	cd /home/unre/Desktop/gm_open && $(MAKE) -f driver/CMakeFiles/epoc.dir/build.make driver/CMakeFiles/epoc.dir/epoc.c.s
+	cd /home/unre/workspace/qt/gm_open && $(MAKE) -f driver/CMakeFiles/epoc.dir/build.make driver/CMakeFiles/epoc.dir/epoc.c.s
 .PHONY : epoc.c.s
 
 epoc_libusb.o: epoc_libusb.c.o
@@ -182,7 +182,7 @@ epoc_libusb.o: epoc_libusb.c.o
 
 # target to build an object file
 epoc_libusb.c.o:
-	cd /home/unre/Desktop/gm_open && $(MAKE) -f driver/CMakeFiles/epoc.dir/build.make driver/CMakeFiles/epoc.dir/epoc_libusb.c.o
+	cd /home/unre/workspace/qt/gm_open && $(MAKE) -f driver/CMakeFiles/epoc.dir/build.make driver/CMakeFiles/epoc.dir/epoc_libusb.c.o
 .PHONY : epoc_libusb.c.o
 
 epoc_libusb.i: epoc_libusb.c.i
@@ -190,7 +190,7 @@ epoc_libusb.i: epoc_libusb.c.i
 
 # target to preprocess a source file
 epoc_libusb.c.i:
-	cd /home/unre/Desktop/gm_open && $(MAKE) -f driver/CMakeFiles/epoc.dir/build.make driver/CMakeFiles/epoc.dir/epoc_libusb.c.i
+	cd /home/unre/workspace/qt/gm_open && $(MAKE) -f driver/CMakeFiles/epoc.dir/build.make driver/CMakeFiles/epoc.dir/epoc_libusb.c.i
 .PHONY : epoc_libusb.c.i
 
 epoc_libusb.s: epoc_libusb.c.s
@@ -198,7 +198,7 @@ epoc_libusb.s: epoc_libusb.c.s
 
 # target to generate assembly for a file
 epoc_libusb.c.s:
-	cd /home/unre/Desktop/gm_open && $(MAKE) -f driver/CMakeFiles/epoc.dir/build.make driver/CMakeFiles/epoc.dir/epoc_libusb.c.s
+	cd /home/unre/workspace/qt/gm_open && $(MAKE) -f driver/CMakeFiles/epoc.dir/build.make driver/CMakeFiles/epoc.dir/epoc_libusb.c.s
 .PHONY : epoc_libusb.c.s
 
 # Help Target
@@ -231,6 +231,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/unre/Desktop/gm_open && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/unre/workspace/qt/gm_open && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
