@@ -1,0 +1,19 @@
+gm_open project (Graphic eMotiv Open Project)
+
+libs:
+- qt4
+- glut / glew (?)
+- qglviewer
+- libmcrypt
+- libusb-1.0
+
+based on:
+- some cpp classes from gmini (http://code.google.com/p/gmini)
+- qdot's repository of emokit (https://github.com/qdot/Emokit)
+
+compilation:
+> cmake CMakeLists.txt
+> make
+
+execute (root permission needed):
+> ./gmopen
